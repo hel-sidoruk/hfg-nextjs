@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model admins {
+  id        Int      @id @default(autoincrement())
+  login     String   @unique @db.VarChar(255)
+  password  String   @db.VarChar(255)
+  createdAt DateTime @db.Timestamptz(6)
+  updatedAt DateTime @db.Timestamptz(6)
+}
+
+model articles {
+  id        Int      @id @default(autoincrement())
+  title     String   @unique @db.VarChar(255)
+  descr     String?  @db.VarChar(255)
+  image     String   @db.VarChar(255)
+  text      String?
+  createdAt DateTime @db.Timestamptz(6)
+  updatedAt DateTime @db.Timestamptz(6)
+}
+
+model schedules {
+  id        Int      @id @default(autoincrement())
+  link      String   @default("/trainings/bjj") @db.VarChar(255)
+  day       String   @db.VarChar(255)
+  time      String   @db.VarChar(255)
+  name      String   @db.VarChar(255)
+  createdAt DateTime @db.Timestamptz(6)
+  updatedAt DateTime @db.Timestamptz(6)
+}
+
+model trainers {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique @db.VarChar(255)
+  disciplines String?  @db.VarChar(255)
+  image       String   @db.VarChar(255)
+  text        String?
+  createdAt   DateTime @db.Timestamptz(6)
+  updatedAt   DateTime @db.Timestamptz(6)
+}
