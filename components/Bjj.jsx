@@ -1,19 +1,19 @@
-import React from 'react';
 import GroupItem from './GroupItem';
 import ImageAnimated from './UI/ImageAnimated';
 import Text from './UI/Text';
 import Title from './UI/Title';
-import BjjImage from '../assets/images/disciplines/bjj.webp';
-import BjjImage2 from '../assets/images/disciplines/bjj2.jpg';
-import BjjImage3 from '../assets/images/disciplines/bjj3.jpg';
-import BjjImage4 from '../assets/images/disciplines/bjj4.webp';
+import BjjImage from '../public/images/disciplines/bjj.webp';
+import BjjImage2 from '../public/images/disciplines/bjj2.webp';
+import BjjImage3 from '../public/images/disciplines/bjj3.webp';
+import BjjImage4 from '../public/images/disciplines/bjj4.webp';
 import Subtitle from './UI/Subtitle';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import styles from '../styles/discipline.module.scss';
 
 const Bjj = () => {
   return (
     <>
-      <div className="group">
+      <div className={styles.group}>
         <GroupItem
           title={'Утренняя группа'}
           time={'7:30'}
@@ -34,21 +34,19 @@ const Bjj = () => {
           trainer={'Виктор Никонов'}
         />
       </div>
-      <div className="discipline__btn-box">
-        <Link
-          onClick={() => window.scrollTo(0, 0)}
-          to={'/contacts'}
-          className="btn btn-fill discipline__btn"
-        >
-          Записаться на тренировку
+      <div className={styles.btnBox}>
+        <Link href="/contacts">
+          <a className={`btn btn-fill ${styles.btn}`}>
+            Записаться на тренировку
+          </a>
         </Link>
       </div>
-      <div className="discipline__info">
-        <div className="discipline__info-top">
-          <Text>
-            <b className="upper">Бразильское джиу-джитсу</b> — это боевое
-            искусство и международное спортивное единоборство. Его основа -
-            борьба в партере, использование принципов рычагов, углов, давления и
+      <div className="discipline-info">
+        <div className={styles.infoTop}>
+          <Text variant="fz-20">
+            <b>Бразильское джиу-джитсу</b> — это боевое искусство и
+            международное спортивное единоборство. Его основа - борьба в
+            партере, использование принципов рычагов, углов, давления и
             тайминга. В отличие от других боевых искусств, которые
             сосредотачиваются на ударах и/или ударах ногами, джиу-джитсу
             фокусируется на контактных захватах и контроле противника, а также
@@ -56,7 +54,7 @@ const Bjj = () => {
           </Text>
           <ImageAnimated
             src={BjjImage2}
-            className={'discipline__image'}
+            className={styles.image}
             alt={'Бразильское джиу-джитсу'}
           />
         </div>
@@ -72,7 +70,7 @@ const Bjj = () => {
         </Text>
         <ImageAnimated
           src={BjjImage3}
-          className={'discipline__image left'}
+          className={`${styles.image} ${styles.imageLeft}`}
           alt={'Бразильское джиу-джитсу'}
         />
         <Subtitle>Отличная фигура</Subtitle>
@@ -96,7 +94,7 @@ const Bjj = () => {
         </Text>
         <ImageAnimated
           src={BjjImage}
-          className={'discipline__image'}
+          className={styles.image}
           alt={'Бразильское джиу-джитсу'}
         />
         <Subtitle>Дисциплина</Subtitle>
@@ -115,7 +113,7 @@ const Bjj = () => {
         </Text>
         <ImageAnimated
           src={BjjImage4}
-          className={'discipline__image left'}
+          className={`${styles.image} ${styles.imageLeft}`}
           alt={'Бразильское джиу-джитсу'}
         />
         <Subtitle>Сила</Subtitle>
