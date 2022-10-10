@@ -1,6 +1,6 @@
 // const ApiError = require('../error/ApiError');
 // const { Schedule } = require('../models/models');
-import prisma from '../../../lib/prisma'
+import prisma from '../../../lib/prisma';
 
 class ScheduleController {
   // async create(req, res, next) {
@@ -18,11 +18,11 @@ class ScheduleController {
   //     // next(ApiError.badRequest(e.message));
   //   }
   // }
-  
+
   async getAll(req, res) {
-    let schedule = await prisma.schedules.findMany()
-    return schedule
+    let schedule = await prisma.schedules.findMany();
+    return schedule;
   }
 }
 
-export default new ScheduleController()
+export default new ScheduleController();

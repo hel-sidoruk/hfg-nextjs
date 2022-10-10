@@ -1,5 +1,5 @@
-import prisma from '../../../lib/prisma'
+import prisma from '../../../lib/prisma';
 export async function fetchTrainersData() {
-    let data = await prisma.trainers.findMany()
-    return data
+  let data = await prisma.trainers.findMany();
+  return data;
 }
