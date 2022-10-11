@@ -11,7 +11,6 @@ const Schedule = ({ schedule, styles }) => {
       Number(a.replace(':', '')) > Number(b.replace(':', '')) ? 1 : -1
     );
   }, [monTueWen]);
-  console.log(monTueWen);
   const timeArray2 = useMemo(() => {
     return Array.from(new Set(schedule.map((el) => el.time))).sort((a, b) =>
       Number(a.replace(':', '')) > Number(b.replace(':', '')) ? 1 : -1
