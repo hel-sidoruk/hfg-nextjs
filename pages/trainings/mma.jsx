@@ -1,11 +1,20 @@
+import Head from 'next/head';
+import Discipline from '../../components/Discipline';
+import Mma from '../../components/Mma';
 import Background from '../../components/UI/Background';
-// import ButtonBack from '../components/UI/ButtonBack';
+import ButtonBack from '../../components/UI/ButtonBack';
 
 const MmaPage = () => {
   return (
     <>
-      {/* <ButtonBack link={'/schedule'} /> */}
+      <Head>
+        <title>MMA</title>
+      </Head>
+      <ButtonBack link={'/schedule'} />
       <Background page={'trains-page'} />
+      <Discipline title="MMA">
+        <Mma />
+      </Discipline>
     </>
   );
 };

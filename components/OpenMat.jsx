@@ -1,9 +1,8 @@
-import React from 'react';
 import Text from './UI/Text';
 
 const OpenMat = () => {
   return (
-    <div className="discipline__info">
+    <div className="discipline-info">
       <h3 className="subtitle">
         Каждую субботу в 12:00 в нашем зале проходит открытый ковер по
         грэпплингу.
