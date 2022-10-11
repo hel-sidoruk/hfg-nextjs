@@ -1,5 +1,3 @@
-// const ApiError = require('../error/ApiError');
-// const { Schedule } = require('../models/models');
 import prisma from '../../../lib/prisma';
 
 class ScheduleController {
@@ -19,7 +17,7 @@ class ScheduleController {
   //   }
   // }
 
-  async getAll(req, res) {
+  async getAll() {
     let schedule = await prisma.schedules.findMany();
     return schedule;
   }

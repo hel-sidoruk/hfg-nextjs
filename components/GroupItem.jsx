@@ -11,7 +11,7 @@ const GroupItem = ({ title, time, days, trainer, first }) => {
   useEffect(() => {
     if (innerWidth > 640) return;
     first && setActive(true);
-  }, []);
+  }, [first]);
   return (
     <div className={`${styles.item} ${active ? styles.itemActive : ''}`}>
       <div className={styles.top} onClick={openDescr}>

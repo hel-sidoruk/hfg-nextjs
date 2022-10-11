@@ -5,7 +5,7 @@ const ScheduleBlock = ({ day, trainings, timeArray, styles }) => {
   const [active, setActive] = useState(false);
   useEffect(() => {
     day === 'Понедельник' && setActive(true);
-  }, []);
+  }, [day]);
 
   return (
     <div
