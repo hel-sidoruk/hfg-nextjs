@@ -88,6 +88,11 @@ ul {
       justify-content: center;
     }
   }
+  &.news {
+    .container {
+      position: relative;
+    }
+  }
 }
 .swiper {
   height: 100%;

@@ -1,0 +1,37 @@
+.content {
+  max-width: 88%;
+  margin: 0 100px;
+  margin-bottom: 50px;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.btn {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+}
+.navBtns {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+}
+.navBtn {
+  @media (max-width: 1024px) {
+    width: 45px;
+    height: 45px;
+    img {
+      width: 26px;
+    }
+  }
+  @media (max-width: 768px) {
+    position: initial;
+    transform: none;
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
