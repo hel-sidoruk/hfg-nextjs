@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Arrow from '../../assets/arrow.svg';
+// import Arrow from '../../assets/arrow.svg';
+
+import Link from 'next/link';
 
 const ButtonBack = ({ link }) => {
   return (
