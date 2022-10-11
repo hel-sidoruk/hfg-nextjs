@@ -1,0 +1,86 @@
+.dropdown {
+  position: relative;
+  width: 100%;
+  background-color: #ddd;
+  border: 2px solid #666;
+  border-radius: 8px;
+  span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    color: #999;
+    font-size: 18px;
+    pointer-events: none;
+    @media (max-width: 1024px) {
+      font-size: 16px;
+    }
+  }
+}
+.disabled {
+  pointer-events: none;
+  border-color: #999;
+}
+.top {
+  font-size: 18px;
+  line-height: 24px;
+  height: 100%;
+  cursor: pointer;
+  min-height: 54px;
+  padding: 15px 20px;
+  padding-right: 50px;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    background-image: url('../assets/triangle.svg');
+    width: 17px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: 17px 12px;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+  }
+}
+.topActive {
+  &::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+.list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform-origin: top;
+  transition: all .3s ease-in-out;
+  transform: scaleY(0);
+  z-index: 10;
+  width: 100%;
+  outline: 2px solid #666;
+  border-radius: 0 0 8px 8px;
+  overflow-x: hidden;
+  font-size: 18px;
+  max-height: 200px;
+  overflow-y: auto;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+.listActive {
+  transform: scaleY(1);
+}
+.item {
+  padding: 15px 20px;
+  cursor: pointer;
+  background-color: #f4f5f6;
+  transition: all .3s ease-in-out;
+  &:not(:last-child) {
+    border-bottom: 1px solid #999;
+  }
+  &:hover {
+    padding-left: 25px;
+    background-color: #ddd;
+  }
+}
+

@@ -7,6 +7,7 @@ import SignUp from '../components/SignUp';
 import Background from '../components/UI/Background';
 import axios from 'axios';
 import News from '../components/News';
+import ContactsHome from '../components/ContactsHome';
 
 export async function getStaticProps() {
   const response = await axios.get(
@@ -33,6 +34,7 @@ export default function Home({ recentArticles }) {
       <Classes />
       <SignUp signRef={signRef} />
       <News news={recentArticles} />
+      <ContactsHome signRef={signRef} />
     </>
   );
 }
