@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import GroupItem from './GroupItem';
+import styles from '../styles/discipline.module.scss';
 
 const MuaiThai = () => {
   return (
     <>
-      <div className="group">
+      <div className={styles.group}>
         <GroupItem
           title={'Основная группа'}
           time={'20:00'}
@@ -14,14 +14,11 @@ const MuaiThai = () => {
           first={true}
         />
       </div>
-
-      <div className="discipline__btn-box">
-        <Link
-          onClick={() => window.scrollTo(0, 0)}
-          to={'/contacts'}
-          className="btn btn-fill discipline__btn"
-        >
-          Записаться на тренировку
+      <div className={styles.btnBox}>
+        <Link href="/contacts">
+          <a className={`btn btn-fill ${styles.btn}`}>
+            Записаться на тренировку
+          </a>
         </Link>
       </div>
     </>

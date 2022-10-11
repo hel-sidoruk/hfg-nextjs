@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import GroupItem from './GroupItem';
 import Text from './UI/Text';
 import Title from './UI/Title';
+import styles from '../styles/discipline.module.scss';
 
 const BjjKids = () => {
   return (
     <>
-      <div className="group">
+      <div className={styles.group}>
         <GroupItem
           title={'Детская группа (4-10 лет)'}
           time={'18:30'}
@@ -22,16 +23,14 @@ const BjjKids = () => {
           trainer={'Евгений Акулич'}
         />
       </div>
-      <div className="discipline__btn-box">
-        <Link
-          onClick={() => window.scrollTo(0, 0)}
-          to={'/contacts'}
-          className="btn btn-fill discipline__btn"
-        >
-          Записаться на тренировку
+      <div className={styles.btnBox}>
+        <Link href="/contacts">
+          <a className={`btn btn-fill ${styles.btn}`}>
+            Записаться на тренировку
+          </a>
         </Link>
       </div>
-      <div className="discipline__info">
+      <div className="discipline-info">
         <Text>
           Бразильское джиу-джитсу — это боевое искусство и международное
           спортивное единоборство. Его основа - борьба в партере, использование
