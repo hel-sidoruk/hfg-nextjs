@@ -1,24 +1,29 @@
 import Head from 'next/head';
 // import Background from '../components/UI/Background';
-// import axios from 'axios';
+import axios from 'axios';
 // import Section from '../components/UI/Section';
 // import Title from '../components/UI/Title';
 // import ScheduleMobile from '../components/ScheduleMobile';
 // import Schedule from '../components/Schedule';
 // import styles from '../styles/schedule.module.scss';
 // import useSWR from 'swr';
-// export async function getStaticProps() {
-//   fetch('/api/schedule').then((res) => console.log(res));
-
-//   // const schedule = response.data;
-//   return {
-//     props: { schedule },
-//   };
-// }
-export default function SchedulePage() {
+export async function getStaticProps() {
+  fetch('/api/schedule').then((res) => console.log(res));
+  const response = await axios.get(
+    `${process.env.NEXT_PUBLIC_HOST}/api/schedule`
+  );
+  const schedule = response.data;
+  // const schedule = response.data;
+  return {
+    props: { schedule },
+  };
+}
+export default function SchedulePage({ schedule }) {
+  console.log(schedule);
   // const { data, error } = useSWR('/api/schedule', fetch);
   // console.log(data);
   // if (!data) return <div>Loading...</div>;
+
   return (
     <>
       <Head>
