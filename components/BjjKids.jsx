@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import GroupItem from './GroupItem';
 import Text from './UI/Text';
 import Title from './UI/Title';
 import styles from '../styles/discipline.module.scss';
+import Link from 'next/link';
 
 const BjjKids = () => {
   return (
