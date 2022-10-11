@@ -1,6 +1,6 @@
 const Section = ({ sectionName, children }) => {
   return (
-    <section className={`section-offset ${sectionName}`}>
+    <section className={`section-offset ${sectionName || ''}`}>
       <div className="container">{children}</div>
     </section>
   );
