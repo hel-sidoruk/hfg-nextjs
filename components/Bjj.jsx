@@ -54,7 +54,7 @@ const Bjj = () => {
           </Text>
           <ImageAnimated
             src={BjjImage2}
-            className={styles.image}
+            className={`${styles.image} ${styles.image1}`}
             alt={'Бразильское джиу-джитсу'}
           />
         </div>

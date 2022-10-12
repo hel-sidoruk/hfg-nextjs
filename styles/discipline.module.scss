@@ -12,6 +12,13 @@
   margin-bottom: 40px;
   display: flex;
   align-items: center;
+  div {
+    min-width: 46%;
+    margin-left: 10px;
+    img {
+      margin: 0;
+    }
+  }
 }
 .btnBox {
   display: flex;
@@ -42,7 +49,7 @@
 .image {
   float: right;
   transition: all .9s ease-in-out;
-  max-width: 46%;
+  max-width: 48%;
   border-radius: 8px;
   box-shadow: -3px 3px 7px 2px rgba(#000, 0.6);
   max-height: 60vh;
@@ -51,6 +58,9 @@
   width: auto;
   height: auto;
   min-width: 46%;
+}
+.image1 {
+  min-width: 100%;
 }
 .imageLeft {
   box-shadow: 3px 3px 7px 4px rgba(#000, 0.6);

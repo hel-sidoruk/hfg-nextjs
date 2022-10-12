@@ -40,6 +40,10 @@
   align-items: center;
   transition: all .3s ease-in-out;
   border-radius: 100%;
+  font-size: 0;
+  background-image: url('../assets/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
   &:active {
     transform: translateY(-50%) scale(0.97);
   }
@@ -51,17 +55,11 @@
   @media (max-width: 768px) {
     height: 50px;
     width: 50px;
-    img {
-      width: 30px;
-    }
   }
   @media (max-width: 576px) {
     height: 34px;
     width: 34px;
     left: 2px;
-    img {
-      width: 20px;
-    }
   }
 }
 .admin-btn {

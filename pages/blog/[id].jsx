@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import ArticleItem from '../../components/ArticleItem';
+import Background from '../../components/UI/Background';
+import ButtonBack from '../../components/UI/ButtonBack';
 import { getPaths } from '../../utils/getPaths';
-// import Background from '../components/UI/Background';
-// import ButtonBack from '../components/UI/ButtonBack';
 export async function getStaticPaths() {
   const response = await axios.get(
     `${process.env.NEXT_PUBLIC_HOST}/api/get-articles-paths`
@@ -48,11 +48,11 @@ const ArticlePage = ({ post }) => {
 
   return (
     <>
-      {/* <ButtonBack link={'/blog'} />
-      <Background page={'blog-page'} /> */}
+      <ButtonBack link={'/blog'} />
+      <Background page={'blog-page'} />
       <ArticleItem
         title={title}
-        // image={`images/articles/${image}`}
+        image={`/images/articles/${image}`}
         text={text}
       />
     </>
