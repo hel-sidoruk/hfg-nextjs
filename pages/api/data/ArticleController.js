@@ -37,8 +37,22 @@ class ArticleController {
     return { articles, count };
   }
 
+  async getIDs() {
+    const articleIDs = await prisma.articles.findMany({
+      select: {
+        id: true,
+      },
+      orderBy: [
+        {
+          id: 'asc',
+        },
+      ],
+    });
+    return articleIDs;
+  }
+
   async getOne(id) {
-    const article = await prisma.user.findUnique({
+    const article = await prisma.articles.findUnique({
       where: { id },
     });
     return article;
