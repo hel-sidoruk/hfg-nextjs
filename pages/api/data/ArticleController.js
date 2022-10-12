@@ -24,7 +24,7 @@ class ArticleController {
     let page = +pageQuery || 1;
     let limit = +limitQuery || 6;
     const offset = page * limit - limit;
-    let articles = await prisma.articles.findMany({
+    let posts = await prisma.articles.findMany({
       skip: offset,
       take: limit,
       orderBy: [
@@ -33,8 +33,9 @@ class ArticleController {
         },
       ],
     });
-    const count = await prisma.articles.count();
-    return { articles, count };
+    const totalCount = await prisma.articles.count();
+    const pageCount = Math.ceil(totalCount / limit);
+    return { posts, currentPage: page, pageCount, limit };
   }
 
   async getIDs() {

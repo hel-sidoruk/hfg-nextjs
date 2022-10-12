@@ -1,9 +1,8 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import ArticleItem from '../../components/ArticleItem';
 import Background from '../../components/UI/Background';
 import ButtonBack from '../../components/UI/ButtonBack';
-import { getPaths } from '../../utils/getPaths';
 export async function getStaticPaths() {
   const response = await axios.get(
     `${process.env.NEXT_PUBLIC_HOST}/api/get-articles-paths`
@@ -13,7 +12,6 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-  // Return a list of possible value for id
 }
 
 export async function getStaticProps({ params }) {
@@ -27,27 +25,15 @@ export async function getStaticProps({ params }) {
       post,
     },
   };
-  // Fetch necessary data for the blog post using params.id
 }
 
 const ArticlePage = ({ post }) => {
-  const { title, descr, image, text } = post;
-  // const { id } = useParams();
-  // const [article, setArticle] = useState({});
-  // const [fetchArticleByID, isLoading, error] = useFetching(async () => {
-  //   const data = await fetchOneArticle(id);
-  //   setArticle(data);
-  // });
-
-  // useEffect(() => {
-  //   fetchArticleByID();
-  //   if (error) console.log(error);
-  // }, []);
-
-  // const { image, title, text } = article;
-
+  const { title, image, text } = post;
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <ButtonBack link={'/blog'} />
       <Background page={'blog-page'} />
       <ArticleItem
