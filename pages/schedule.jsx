@@ -7,16 +7,16 @@ import ScheduleMobile from '../components/ScheduleMobile';
 import Schedule from '../components/Schedule';
 import styles from '../styles/schedule.module.scss';
 
-export async function getStaticProps() {
-  const response = await axios.get(
-    `${process.env.NEXT_PUBLIC_HOST}/api/schedule`
-  );
-  const schedule = response.data;
-  return {
-    props: { schedule },
-  };
-}
-export default function SchedulePage({ schedule }) {
+// export async function getStaticProps() {
+//   const response = await axios.get(
+//     `${process.env.NEXT_PUBLIC_HOST}/api/schedule`
+//   );
+//   const schedule = response.data;
+//   return {
+//     props: { schedule },
+//   };
+// }
+export default function SchedulePage() {
   return (
     <>
       <Head>
@@ -25,8 +25,8 @@ export default function SchedulePage({ schedule }) {
       <Background page={'trains-page'} />
       <Section sectionName={'disciplines'}>
         <Title>Тренировки</Title>
-        <Schedule styles={styles} schedule={schedule} />
-        <ScheduleMobile styles={styles} schedule={schedule} />
+        {/* <Schedule styles={styles} schedule={schedule} />
+        <ScheduleMobile styles={styles} schedule={schedule} /> */}
       </Section>
     </>
   );
