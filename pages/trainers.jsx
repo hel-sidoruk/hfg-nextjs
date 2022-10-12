@@ -18,6 +18,7 @@ export async function getStaticProps() {
 }
 
 export default function TrainersPage({ trainers }) {
+  console.log('first');
   console.log(trainers);
   return (
     <>
