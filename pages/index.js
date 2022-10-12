@@ -19,7 +19,7 @@ export async function getStaticProps() {
   };
 }
 export default function Home({ recentArticles }) {
-  const news = recentArticles.articles;
+  const news = recentArticles.posts;
   const signRef = useRef();
   // axios.get('http://localhost:3000/api/trainers').then(res => console.log(res.data))
   // axios.get('http://localhost:3000/api/schedule').then(res => console.log(res.data))

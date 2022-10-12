@@ -2,11 +2,9 @@ import { paginationFunction } from '../../utils/pages';
 import styles from '../../styles/pagination.module.scss';
 
 export const Pagination = ({ pagesArray, page, changePage }) => {
-  // const history = useNavigate();
   const handleClick = (e) => {
     changePage(e.target.innerText);
-    // history(`/blog?page=${e.target.innerText}`);
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
 
   const paginationBtns = paginationFunction(pagesArray, page);
@@ -22,7 +20,7 @@ export const Pagination = ({ pagesArray, page, changePage }) => {
           {el}
         </button>
       ))}
-      <span className={`${styles.dots} ${page > 3 ? 'dots--active' : ''}`}>
+      <span className={`${styles.dots} ${page > 3 ? styles.active : ''}`}>
         ...
       </span>
       <span
