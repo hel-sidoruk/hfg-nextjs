@@ -1,9 +1,9 @@
 import axios from 'axios';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import Articles from '../components/Articles';
-import Background from '../components/UI/Background';
-import { getPageCount } from '../utils/pages';
+import Articles from '../../components/Articles';
+import Background from '../../components/UI/Background';
+import { getPageCount } from '../../utils/pages';
 
 export async function getStaticProps() {
   const response = await axios.get(
