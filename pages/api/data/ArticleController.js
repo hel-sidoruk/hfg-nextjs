@@ -33,7 +33,8 @@ class ArticleController {
         },
       ],
     });
-    return articles;
+    const count = await prisma.articles.count();
+    return { articles, count };
   }
 
   async getOne(id) {
