@@ -13,12 +13,14 @@ import ContactsHome from '../components/ContactsHome';
 //   const response = await axios.get(
 //     `${process.env.NEXT_PUBLIC_HOST}/api/articles`
 //   );
-//   const recentArticles = response.data.articles;
+//   const recentArticles = response.data;
 //   return {
 //     props: { recentArticles },
 //   };
 // }
 export default function Home() {
+  // const news = recentArticles.articles;
+  // console.log(news);
   const signRef = useRef();
   // axios.get('http://localhost:3000/api/trainers').then(res => console.log(res.data))
   // axios.get('http://localhost:3000/api/schedule').then(res => console.log(res.data))

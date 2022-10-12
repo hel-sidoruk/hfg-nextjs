@@ -15,7 +15,7 @@ import Background from '../components/UI/Background';
 //   };
 // }
 
-export default function BlogPage({ articles }) {
+export default function BlogPage() {
   // const [currentPage, setCurrentPage] = useState(1);
   // const [totalPages, setTotalPages] = useState(0);
   // useEffect(() => {
