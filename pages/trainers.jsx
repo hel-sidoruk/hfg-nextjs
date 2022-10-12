@@ -7,17 +7,18 @@ import Section from '../components/UI/Section';
 import Title from '../components/UI/Title';
 import styles from '../styles/trainers.module.scss';
 
-// export async function getStaticProps() {
-//   const response = await axios.get(
-//     `${process.env.NEXT_PUBLIC_HOST}/api/trainers`
-//   );
-//   const trainers = response.data;
-//   return {
-//     props: { trainers },
-//   };
-// }
+export async function getStaticProps() {
+  const response = await axios.get(
+    `${process.env.NEXT_PUBLIC_HOST}/api/trainers`
+  );
+  const trainers = response.data;
+  return {
+    props: { trainers },
+  };
+}
 
-export default function TrainersPage() {
+export default function TrainersPage({ trainers }) {
+  console.log(trainers);
   return (
     <>
       <Head>
