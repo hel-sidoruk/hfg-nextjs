@@ -13,7 +13,7 @@ export async function getStaticProps() {
   const response = await axios.get(
     `${process.env.NEXT_PUBLIC_HOST}/api/articles`
   );
-  const recentArticles = response.data;
+  const recentArticles = response.data.articles;
   return {
     props: { recentArticles },
   };
