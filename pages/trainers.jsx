@@ -18,8 +18,6 @@ export async function getStaticProps() {
 }
 
 export default function TrainersPage({ trainers }) {
-  console.log('first');
-  console.log(trainers);
   return (
     <>
       <Head>
@@ -28,7 +26,7 @@ export default function TrainersPage({ trainers }) {
       <Background page={'trainers-page'} />
       <Section sectionName={'trainers'}>
         <Title variant={'trainers-title'}>Наши тренеры</Title>
-        {/* <TrainersList trainers={trainers} styles={styles} /> */}
+        <TrainersList trainers={trainers} styles={styles} />
         <div className={styles.btns}>
           <Link href="/schedule">
             <a className={`btn ${styles.btn}`}>Открыть расписание</a>
