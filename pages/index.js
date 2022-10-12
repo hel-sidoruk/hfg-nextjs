@@ -9,18 +9,17 @@ import axios from 'axios';
 import News from '../components/News';
 import ContactsHome from '../components/ContactsHome';
 
-// export async function getStaticProps() {
-//   const response = await axios.get(
-//     `${process.env.NEXT_PUBLIC_HOST}/api/articles`
-//   );
-//   const recentArticles = response.data;
-//   return {
-//     props: { recentArticles },
-//   };
-// }
-export default function Home() {
-  // const news = recentArticles.articles;
-  // console.log(news);
+export async function getStaticProps() {
+  const response = await axios.get(
+    `${process.env.NEXT_PUBLIC_HOST}/api/articles`
+  );
+  const recentArticles = response.data;
+  return {
+    props: { recentArticles },
+  };
+}
+export default function Home({ recentArticles }) {
+  const news = recentArticles.articles;
   const signRef = useRef();
   // axios.get('http://localhost:3000/api/trainers').then(res => console.log(res.data))
   // axios.get('http://localhost:3000/api/schedule').then(res => console.log(res.data))
@@ -34,7 +33,7 @@ export default function Home() {
       <AboutHome />
       <Classes />
       <SignUp signRef={signRef} />
-      {/* <News news={recentArticles} /> */}
+      <News news={news} />
       <ContactsHome signRef={signRef} />
     </>
   );
