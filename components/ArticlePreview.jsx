@@ -12,7 +12,7 @@ const ArticlePreview = ({ image, title, descr, id, home }) => {
         <p className={`${styles.descr} ${home ? styles.descrRecent : ''}`}>
           {descr}
         </p>
-        <Link href={`/article/${id}`}>
+        <Link href={`/blog/${id}`}>
           <a className={`${styles.button} btn`}>Читать полностью</a>
         </Link>
       </div>

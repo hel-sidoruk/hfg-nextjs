@@ -8,12 +8,15 @@ const ImageAnimated = ({ src, className, alt }) => {
   });
   return (
     <>
-      <div aria-hidden="true" ref={ref}></div>
-      <Image
-        className={`${className} ${inView ? 'opacity-1' : 'opacity-0'}`}
-        src={src}
-        alt={alt}
-      />
+      <div aria-hidden="true" ref={ref}>
+        <Image
+          width={500}
+          height={500}
+          className={`${className} ${inView ? 'opacity-1' : 'opacity-0'}`}
+          src={src}
+          alt={alt}
+        />
+      </div>
     </>
   );
 };

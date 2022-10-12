@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Text from './UI/Text';
 import { useInView } from 'react-intersection-observer';
 import Title from './UI/Title';
+import ImageAnimated from './UI/ImageAnimated';
 // import Image from 'next/image';
 // import ImageAnimated from './UI/ImageAnimated';
 
@@ -31,11 +32,11 @@ export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
           alt="trainer photo"
         />
       </div> */}
-      {/* <ImageAnimated
+      <ImageAnimated
         className={styles.image}
         src={`/images/trainers/${image}`}
         alt="trainer photo"
-      /> */}
+      />
       <div className={styles.info}>
         <Title variant={styles.title}>{name}</Title>
         <Title variant={styles.disciplines}>{disciplines}</Title>
