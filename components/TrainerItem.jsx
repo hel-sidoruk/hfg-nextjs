@@ -25,16 +25,9 @@ export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
         inView ? styles.imageAnim1 : styles.imageAnim0
       }`}
     >
-      {/* <div>
-        <Image
-          layout="fill"
-          src={`/images/trainers/${image}`}
-          alt="trainer photo"
-        />
-      </div> */}
       <ImageAnimated
         className={styles.image}
-        src={`/images/trainers/${image}`}
+        src={`/images/trainers/${image.replace('.jpg', '.webp')}`}
         alt="trainer photo"
       />
       <div className={styles.info}>

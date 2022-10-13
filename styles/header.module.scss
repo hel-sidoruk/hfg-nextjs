@@ -100,6 +100,11 @@
   }
 }
 .disabledLink {
-  color: #481313;
+  color: #ffdada;
+  // color: #481313;
   pointer-events: none;
+  &::after {
+    transform: scaleY(1);
+    background-color: #ffdada;
+  }
 }

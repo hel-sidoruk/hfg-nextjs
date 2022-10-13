@@ -1,0 +1,59 @@
+.contacts-home {
+  .form {
+    width: 80%;
+    background-color: transparent;
+    color: #fbfbfb;
+    align-self: center;
+    label {
+      display: none;
+    }
+    .input, .dropdown {
+      background-color: rgba(#ddd, 0.8);
+    }
+    .input::placeholder {
+      color: #666;
+    }
+    &__title {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .dropdown__top {
+      color: #111;
+    }
+    .dropdown span, .dropdown__item {
+      color: #666;
+    }
+    .btn {
+      text-transform: uppercase;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .contacts-home {
+    .form {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .contacts-home {
+    .form {
+      padding: 0;
+      width: 100%;
+    }
+    .form__field {
+      grid-column: unset;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .contacts-home {
+    .form__field {
+      grid-column: span 2;
+    }
+  }
+  .form__title {
+    font-size: 18px;
+  }
+}

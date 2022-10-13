@@ -38,7 +38,7 @@ const News = ({ news }) => {
         {news.map(({ id, image, title, descr }) => (
           <SwiperSlide key={id}>
             <ArticlePreview
-              image={`/images/articles/${image}`}
+              image={`/images/articles/${image.replace('.jpg', '.webp')}`}
               title={title}
               descr={descr}
               id={id}
