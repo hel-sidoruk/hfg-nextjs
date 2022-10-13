@@ -6,9 +6,9 @@ const ArticlePreview = ({ image, title, descr, id, home }) => {
     <article className={`${styles.article} ${home ? styles.recent : ''}`}>
       <img src={image} alt="article image" />
       <div className={`${styles.bottom} ${home ? styles.bottomRecent : ''}`}>
-        <h4 className={`${styles.title} ${home ? styles.titleRecent : ''}`}>
+        <p className={`${styles.title} ${home ? styles.titleRecent : ''}`}>
           {title}
-        </h4>
+        </p>
         <p className={`${styles.descr} ${home ? styles.descrRecent : ''}`}>
           {descr}
         </p>
