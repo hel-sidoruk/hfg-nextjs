@@ -34,7 +34,7 @@ const ArticlePage = ({ post }) => {
         <title>{title} | Holy Family Gym</title>
         <meta name="description" content={descr} />
       </Head>
-      <ButtonBack link={'/blog'} />
+      <ButtonBack />
       <Background page={'blog-page'} />
       <ArticleItem
         title={title}

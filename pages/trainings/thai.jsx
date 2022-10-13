@@ -10,7 +10,7 @@ const ThaiPage = () => {
       <Head>
         <title>Тайский бокс</title>
       </Head>
-      <ButtonBack link={'/schedule'} />
+      <ButtonBack />
       <Background page={'trains-page'} />
       <Discipline title="Тайский бокс">
         <MuaiThai />

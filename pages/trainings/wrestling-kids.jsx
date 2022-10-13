@@ -10,7 +10,7 @@ const WrestlingKidsPage = () => {
       <Head>
         <title>Вольная борьба для детей</title>
       </Head>
-      <ButtonBack link={'/schedule'} />
+      <ButtonBack />
       <Background page={'trains-page'} />
       <Discipline title="Вольная борьба для детей">
         <WrestlingKids />

@@ -1,12 +1,11 @@
-// import Arrow from '../../assets/arrow.svg';
+import { useRouter } from 'next/router';
 
-import Link from 'next/link';
-
-const ButtonBack = ({ link }) => {
+const ButtonBack = () => {
+  const router = useRouter();
   return (
-    <Link href={link}>
-      <a className="btn-back btn-fill">Назад</a>
-    </Link>
+    <button onClick={() => router.back()} className="btn-back btn-fill">
+      Назад
+    </button>
   );
 };
 
