@@ -43,6 +43,8 @@ export default function Home({ recentArticles }) {
           content="Тренировки по Бразильскому джиу-джитсу, Грэпплингу, Вольной борьбе, Тайскому боксу, ММА. Единоборства в Минске для детей и взрослых. Бразильское джиу-джитсу и грэпплинг Минск. Тайский бокс Минск. ММА Минск. Вольная борьба Минск"
         />
         <meta property="og:image" content="/big-logo.webp" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/maskable_icon.png" />
       </Head>
       <Background page={'home-page'} />
       <Hero home={true} />
