@@ -49,10 +49,10 @@ const News = ({ news }) => {
       </Swiper>
       <div className={styles.navBtns}>
         <button className={`btn nav-btn nav-btn--left prev ${styles.navBtn}`}>
-          <img src="/icons/arrow.svg" alt="arrow" />
+          Назад
         </button>
         <button className={`btn nav-btn nav-btn--right next ${styles.navBtn}`}>
-          <img src="/icons/arrow.svg" alt="arrow" />
+          Вперед
         </button>
       </div>
       <Link href="/blog">

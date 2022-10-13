@@ -22,16 +22,36 @@ const HeroSwiper = ({ wrapperClass }) => {
         loop
       >
         <SwiperSlide style={{ width: '100%' }}>
-          <Image src={HomeHeroImage1} layout="fill" alt="holy family photo" />
+          <Image
+            loading="lazy"
+            src={HomeHeroImage1}
+            layout="fill"
+            alt="holy family photo"
+          />
         </SwiperSlide>
         <SwiperSlide style={{ width: '100%' }}>
-          <Image src={HomeHeroImage2} layout="fill" alt="holy family photo" />
+          <Image
+            loading="lazy"
+            src={HomeHeroImage2}
+            layout="fill"
+            alt="holy family photo"
+          />
         </SwiperSlide>
         <SwiperSlide style={{ width: '100%' }}>
-          <Image src={HomeHeroImage3} layout="fill" alt="holy family photo" />
+          <Image
+            loading="lazy"
+            src={HomeHeroImage3}
+            layout="fill"
+            alt="holy family photo"
+          />
         </SwiperSlide>
         <SwiperSlide style={{ width: '100%' }}>
-          <Image src={HomeHeroImage4} layout="fill" alt="holy family photo" />
+          <Image
+            loading="lazy"
+            src={HomeHeroImage4}
+            layout="fill"
+            alt="holy family photo"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
