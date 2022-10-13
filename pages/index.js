@@ -26,7 +26,23 @@ export default function Home({ recentArticles }) {
   return (
     <>
       <Head>
-        <title>Главная</title>
+        <title>Holy Family Gym | Зал единоборств в Минске</title>
+        <meta name="theme-color" content="#1F1A1A" />
+        <meta
+          name="description"
+          content="Тренировки по Бразильскому джиу-джитсу, Грэпплингу, Вольной борьбе, Тайскому боксу, ММА. Единоборства в Минске для детей и взрослых. Бразильское джиу-джитсу и грэпплинг Минск. Тайский бокс Минск. ММА Минск. Вольная борьба Минск"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hfg-nextjs.vercel.app/" />
+        <meta
+          property="og:title"
+          content="Holy Family Gym | Зал единоборств в Минске"
+        />
+        <meta
+          property="og:description"
+          content="Тренировки по Бразильскому джиу-джитсу, Грэпплингу, Вольной борьбе, Тайскому боксу, ММА. Единоборства в Минске для детей и взрослых. Бразильское джиу-джитсу и грэпплинг Минск. Тайский бокс Минск. ММА Минск. Вольная борьба Минск"
+        />
+        <meta property="og:image" content="/big-logo.webp" />
       </Head>
       <Background page={'home-page'} />
       <Hero home={true} />
