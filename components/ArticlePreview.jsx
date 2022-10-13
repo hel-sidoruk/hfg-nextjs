@@ -1,10 +1,13 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/article.module.scss';
 
 const ArticlePreview = ({ image, title, descr, id, home }) => {
   return (
     <article className={`${styles.article} ${home ? styles.recent : ''}`}>
-      <img src={image} alt="article image" />
+      <div className={styles.image}>
+        <Image layout="fill" src={image} alt="article image" />
+      </div>
       <div className={`${styles.bottom} ${home ? styles.bottomRecent : ''}`}>
         <p className={`${styles.title} ${home ? styles.titleRecent : ''}`}>
           {title}

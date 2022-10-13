@@ -1,9 +1,14 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const ClassCard = ({ image, text, styles, to }) => {
   return (
     <div className={`${styles.card} ${!image ? styles.noImage : ''}`}>
-      {image && <img src={image} alt={text} />}
+      {image && (
+        <div className={styles.image}>
+          <Image layout="fill" src={image} alt={text} />
+        </div>
+      )}
       {to ? (
         <Link href={to}>
           <a>{text}</a>

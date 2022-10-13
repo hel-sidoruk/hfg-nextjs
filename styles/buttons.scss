@@ -98,14 +98,19 @@
   padding: 0;
   left: 30px;
   z-index: 10;
+  font-size: 0;
+  background-image: url('../assets/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
   &:active {
     transform: translateY(-50%) scale(0.95);
   }
   &--right {
     left: unset;
     right: 30px;
-    img {
-      transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+    &:active {
+      transform:  translateY(-50%) scale(0.95) rotate(180deg);
     }
   }
   &:disabled {
