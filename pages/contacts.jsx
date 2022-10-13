@@ -9,7 +9,11 @@ export default function ContactsPage() {
   return (
     <>
       <Head>
-        <title>Контакты</title>
+        <title>Контакты | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Контактная информация зала Holy Family Gym. Записаться на тренировку в Holy Family Gym"
+        />
       </Head>
       <Background page={'contacts-page'} />
       <section className="contacts">
