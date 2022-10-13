@@ -14,7 +14,7 @@ const BjjPage = () => {
           content="Тренировки по Бразильскому джиу-джитсу в Минске в Holy Family Gym. Утренние и вечерние группы, группа для начинающих"
         />
       </Head>
-      <ButtonBack link={'/schedule'} />
+      <ButtonBack />
       <Background page={'trains-page'} />
       <Discipline title="Бразильское джиу-джитсу">
         <Bjj />

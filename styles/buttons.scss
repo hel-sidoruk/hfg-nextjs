@@ -36,6 +36,7 @@
   width: 80px;
   height: 80px;
   display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   transition: all .3s ease-in-out;
@@ -48,7 +49,8 @@
     transform: translateY(-50%) scale(0.97);
   }
   @media (max-width: 1410px) {
-    top: 12%;
+    top: 115px;
+    transform: none;
   }
   @media (max-width: 1024px) {
     height: 60px;
@@ -56,7 +58,7 @@
     left: 10px;
   }
   @media (max-width: 768px) {
-    top: 9%;
+    top: 80px;
   }
 }
 .admin-btn {

@@ -10,7 +10,7 @@ const BjjKidsPage = () => {
       <Head>
         <title>Бразильское джиу-джитсу для детей</title>
       </Head>
-      <ButtonBack link={'/schedule'} />
+      <ButtonBack />
       <Background page={'trains-page'} />
       <Discipline title="Бразильское джиу-джитсу для детей">
         <BjjKids />

@@ -10,7 +10,7 @@ const TaekwondoKidsPage = () => {
       <Head>
         <title>Таэквондо</title>
       </Head>
-      <ButtonBack link={'/schedule'} />
+      <ButtonBack />
       <Background page={'trains-page'} />
       <Discipline title="Таэквондо">
         <Taekwondo />

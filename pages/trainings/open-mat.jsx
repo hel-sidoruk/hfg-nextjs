@@ -10,7 +10,7 @@ const OpenMatPage = () => {
       <Head>
         <title>Бразильское джиу-джитсу</title>
       </Head>
-      <ButtonBack link={'/schedule'} />
+      <ButtonBack />
       <Background page={'trains-page'} />
       <Discipline title="Бразильское джиу-джитсу">
         <OpenMat />

@@ -10,7 +10,7 @@ const MmaPage = () => {
       <Head>
         <title>MMA</title>
       </Head>
-      <ButtonBack link={'/schedule'} />
+      <ButtonBack />
       <Background page={'trains-page'} />
       <Discipline title="MMA">
         <Mma />

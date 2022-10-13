@@ -10,7 +10,7 @@ const GrapplingPage = () => {
       <Head>
         <title>Грэпплинг</title>
       </Head>
-      <ButtonBack link={'/schedule'} />
+      <ButtonBack />
       <Background page={'trains-page'} />
       <Discipline title="Грэпплинг">
         <Grappling />
