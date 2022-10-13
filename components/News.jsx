@@ -42,7 +42,6 @@ const News = ({ news }) => {
               title={title}
               descr={descr}
               id={id}
-              home={true}
             />
           </SwiperSlide>
         ))}

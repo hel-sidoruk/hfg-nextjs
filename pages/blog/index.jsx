@@ -39,7 +39,11 @@ export default function BlogPage({ posts, currentPage, limit, pageCount }) {
   return (
     <>
       <Head>
-        <title>Блог</title>
+        <title>Блог | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Статьи от Holy Family Gym. Интересное о мире единоборств и жизни клуба"
+        />
       </Head>
       <Background page={'blog-page'} />
       <Section sectionName={styles.articles}>
