@@ -21,7 +21,11 @@ export default function TrainersPage({ trainers }) {
   return (
     <>
       <Head>
-        <title>Тренеры</title>
+        <title>Тренеры | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Тренеры Holy Family Gym. Тренировки по бразильскому джиу-джитсу, тайскому боксу, грэпплингу, ММА, вольной борьбе в Минске"
+        />
       </Head>
       <Background page={'trainers-page'} />
       <Section sectionName={'trainers'}>

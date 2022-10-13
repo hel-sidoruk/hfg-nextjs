@@ -20,7 +20,11 @@ export default function SchedulePage({ schedule }) {
   return (
     <>
       <Head>
-        <title>Расписание</title>
+        <title>Расписание | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Расписание тренировок в зале Holy Family Gym. Бразильское джиу-джитсу, Вольная борьба, Грэпплинг, Тайский бокс, ММА, детские тренировки"
+        />
       </Head>
       <Background page={'trains-page'} />
       <Section sectionName={'disciplines'}>

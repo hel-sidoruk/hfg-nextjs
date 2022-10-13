@@ -21,6 +21,7 @@ const Hero = ({ home }) => {
   ) : (
     <section className={styles.about} onClick={handleClick}>
       <Image
+        priority="true"
         src="/images/about-hero.webp"
         layout="fill"
         alt="holy family photo"
