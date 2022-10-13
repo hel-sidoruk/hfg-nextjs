@@ -16,7 +16,6 @@ export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
   const openText = () => {
     active ? setActive(false) : setActive(true);
   };
-  // const css = { width: '100%', maxHeight: '75vh', height: '100%' };
   return (
     <div
       id={id}
@@ -26,6 +25,7 @@ export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
       }`}
     >
       <ImageAnimated
+        wrapClass={styles.wrapper}
         className={styles.image}
         src={`/images/trainers/${image.replace('.jpg', '.webp')}`}
         alt="trainer photo"

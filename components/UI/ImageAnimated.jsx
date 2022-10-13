@@ -1,14 +1,14 @@
 import Image from 'next/future/image';
 import { useInView } from 'react-intersection-observer';
 
-const ImageAnimated = ({ src, className, alt }) => {
+const ImageAnimated = ({ src, className, alt, wrapClass }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.4,
   });
   return (
     <>
-      <div aria-hidden="true" ref={ref}>
+      <div className={wrapClass} aria-hidden="true" ref={ref}>
         <Image
           width={500}
           height={500}
