@@ -6,11 +6,11 @@ const ContactsHome = ({ signRef }) => {
   return (
     <Section sectionName={'contacts-home'}>
       <RegistrationForm signRef={signRef} />
-      <MapBlock
+      {/* <MapBlock
         mapWidth={'100%'}
         mapHeight={'100%'}
         // mapHeight={window.innerWidth > 1024 ? '100%' : '250px'}
-      />
+      /> */}
     </Section>
   );
 };
