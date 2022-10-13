@@ -9,8 +9,7 @@ const Footer = () => {
         <Link href="/">
           <a className={styles.logo}>
             <Image
-              width={200}
-              height={200}
+              layout="fill"
               src="/images/logo-footer.png"
               alt="HolyFamily logo"
             />
@@ -21,34 +20,31 @@ const Footer = () => {
           <div className={styles.social}>
             <a
               target="_blank"
+              className={styles.socialLink}
               href="https://vk.com/bjj_holyfamilygym"
               rel="noreferrer"
             >
-              <Image width={50} height={50} src="/icons/vk.svg" alt="vk icon" />
+              <Image layout="fill" src="/icons/vk.svg" alt="vk icon" />
             </a>
             <a
               target="_blank"
+              className={styles.socialLink}
               href="https://www.instagram.com/holyfamilygym/"
               rel="noreferrer"
             >
               <Image
-                width={50}
-                height={50}
+                layout="fill"
                 src="/icons/instagram.svg"
                 alt="instagram icon"
               />
             </a>
             <a
               target="_blank"
+              className={styles.socialLink}
               href="https://facebook.com/HolyFamilyGym/"
               rel="noreferrer"
             >
-              <Image
-                width={50}
-                height={50}
-                src="/icons/fb.svg"
-                alt="facebook icon"
-              />
+              <Image layout="fill" src="/icons/fb.svg" alt="facebook icon" />
             </a>
           </div>
           <a
