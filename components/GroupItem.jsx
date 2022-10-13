@@ -15,7 +15,7 @@ const GroupItem = ({ title, time, days, trainer, first }) => {
   return (
     <div className={`${styles.item} ${active ? styles.itemActive : ''}`}>
       <div className={styles.top} onClick={openDescr}>
-        <h4 className={styles.title}>{title}</h4>
+        <h3 className={styles.title}>{title}</h3>
       </div>
       <div className={`${styles.descr} ${active ? styles.descrActive : ''}`}>
         <div className={styles.field}>
@@ -36,7 +36,9 @@ const GroupItem = ({ title, time, days, trainer, first }) => {
       <button
         className={`${styles.close} ${active ? styles.closeActive : ''}`}
         onClick={openDescr}
-      ></button>
+      >
+        Свернуть расписание
+      </button>
     </div>
   );
 };

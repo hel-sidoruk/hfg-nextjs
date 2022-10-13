@@ -38,7 +38,7 @@
     &.top {
       &::after {
         top: 27%;
-        background-image: url('../assets/about/medals.png');
+        background-image: url('../assets/about/medals.webp');
         height: 70%;
       }
       .text {
@@ -67,7 +67,7 @@
         top: 30px;
         right: 0;
         left: 50%;
-        background-image: url('../assets/about/column.png');
+        background-image: url('../assets/about/column.webp');
         border-radius: 5px 0 0 5px;
       }
     }
@@ -91,7 +91,7 @@
       }
       &::after {
         top: 40px;
-        background-image: url('../assets/about/armbar.png');
+        background-image: url('../assets/about/armbar.webp');
       }
     }
   }

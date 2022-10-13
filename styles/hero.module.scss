@@ -96,5 +96,11 @@
   height: 100vh;
   position: relative;
   box-shadow: 0 4px 6px 5px rgba(#000, 0.5);
+  @media (max-width: 768px) {
+    height: 65vh;
+  }
+  @media (max-width: 576px) {
+    height: 50vh;
+  }
 }
 
