@@ -1,21 +1,12 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 const ScheduleBlock = ({ day, trainings, timeArray, styles }) => {
-  const [active, setActive] = useState(false);
-  useEffect(() => {
-    day === 'Понедельник' && setActive(true);
-  }, [day]);
-
   return (
-    <div
-      className={`${styles.block} ${active ? styles.blockActive : ''}`}
-      onClick={() => (active ? setActive(false) : setActive(true))}
-    >
+    <div className={styles.block}>
       <div className={`${styles.mobileHeader} ${styles.cell} ${styles.head}`}>
         {day}
       </div>
-      <ul className={`${styles.list} ${active ? styles.listActive : ''}`}>
+      <ul className={styles.list}>
         {timeArray.map((timeEl) => (
           <li key={timeEl + day} className={styles.item}>
             <div className={`${styles.cell}`}>{timeEl}</div>

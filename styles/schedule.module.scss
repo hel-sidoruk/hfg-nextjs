@@ -49,14 +49,6 @@
   &:first-child {
     grid-column-start: 2;
   }
-  @media (max-width: 900px) {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  @media (max-width: 576px) {
-    font-size: 16px;
-    line-height: 20px;
-  }
 }
 .time {
   grid-column-start: 1;
@@ -117,12 +109,6 @@
 .mobileHeader {
   padding: 15px;
   letter-spacing: 1px;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
-  &:hover {
-    background-color: #A44848;
-    filter: brightness(1.1);
-  }
 }
 .item {
   display: grid;
@@ -130,16 +116,4 @@
 }
 .block {
   margin-bottom: 20px;
-  height: 50px;
-}
-.blockActive {
-  height: unset;
-}
-.list {
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: all .3s ease-in-out;
-}
-.listActive {
-  transform: scaleY(1);
 }

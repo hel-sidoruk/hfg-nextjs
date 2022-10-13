@@ -51,6 +51,9 @@
   @media (max-width: 1410px) {
     top: 115px;
     transform: none;
+    &:active {
+      transform: scale(0.97);
+    }
   }
   @media (max-width: 1024px) {
     height: 60px;
