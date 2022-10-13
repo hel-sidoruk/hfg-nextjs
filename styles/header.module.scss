@@ -83,10 +83,10 @@
     bottom: -3px;
     transition: all .3s ease-in-out;
     transform: scale(0);
-    background-color: #481313;
+    background-color: #ffdada;
   }
   &:hover {
-    color: #481313;
+    color: #ffdada;
     &::after {
       transform: scale(1);
     }
