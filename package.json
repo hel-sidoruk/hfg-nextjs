@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@pbe/react-yandex-maps": "^1.1.9",
     "@prisma/client": "^4.4.0",
     "axios": "^1.1.2",
     "next": "12.3.1",

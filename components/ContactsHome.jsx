@@ -1,15 +1,16 @@
 import RegistrationForm from './RegistrationForm';
-// import MapBlock from './UI/MapBlock';
+import MapBlock from './UI/MapBlock';
 import Section from './UI/Section';
 
 const ContactsHome = ({ signRef }) => {
   return (
     <Section sectionName={'contacts-home'}>
       <RegistrationForm signRef={signRef} />
-      {/* <MapBlock
+      <MapBlock
         mapWidth={'100%'}
-        mapHeight={innerWidth > 1024 ? '100%' : '250px'}
-      /> */}
+        mapHeight={'100%'}
+        // mapHeight={window.innerWidth > 1024 ? '100%' : '250px'}
+      />
     </Section>
   );
 };
