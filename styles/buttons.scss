@@ -47,19 +47,16 @@
   &:active {
     transform: translateY(-50%) scale(0.97);
   }
+  @media (max-width: 1410px) {
+    top: 12%;
+  }
   @media (max-width: 1024px) {
     height: 60px;
     width: 60px;
     left: 10px;
   }
   @media (max-width: 768px) {
-    height: 50px;
-    width: 50px;
-  }
-  @media (max-width: 576px) {
-    height: 34px;
-    width: 34px;
-    left: 2px;
+    top: 9%;
   }
 }
 .admin-btn {
