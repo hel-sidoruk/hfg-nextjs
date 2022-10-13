@@ -12,6 +12,12 @@
     right: 0;
     background-color: rgba(#000, 0.5);
   }
+  @media (max-width: 768px) {
+    height: 65vh;
+  }
+  @media (max-width: 576px) {
+    height: 50vh;
+  }
 }
 .container {
   display: flex;
@@ -28,6 +34,26 @@
   color: #D8D8D8;
   text-shadow: 8px 8px 6px rgba(0, 0, 0, 0.51);
   text-transform: uppercase;
+  @media (max-width: 1280px) {
+    font-size: 84px;
+    line-height: 120px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 84px;
+    line-height: 120px;
+  }
+  @media (max-width: 900px) {
+    font-size: 64px;
+    line-height: 82px;
+  }
+  @media (max-width: 768px) {
+    font-size: 42px;
+    line-height: 56px;
+  }
+  @media (max-width: 576px) {
+    font-size: 28px;
+    line-height: 42px;
+  }
 }
 .swiper {
   position: absolute;
@@ -43,6 +69,27 @@
   line-height: 98px;
   letter-spacing: 2px;
   color: #fbfbfb;
+  @media (max-width: 1280px) {
+    font-size: 46px;
+    line-height: 64px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 46px;
+    line-height: 64px;
+  }
+  @media (max-width: 900px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @media (max-width: 576px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
 }
 .about {
   width: 100%;
@@ -50,63 +97,4 @@
   position: relative;
   box-shadow: 0 4px 6px 5px rgba(#000, 0.5);
 }
-@media (max-width: 1280px) {
-  .hero {
-    &__title {
-      font-size: 84px;
-      line-height: 120px;
-    }
-    &__descr {
-      font-size: 46px;
-      line-height: 64px;
-    }
-  }
-}
-@media (max-width: 1280px) {
-  .hero {
-    &__title {
-      font-size: 84px;
-      line-height: 120px;
-    }
-    &__descr {
-      font-size: 46px;
-      line-height: 64px;
-    }
-  }
-}
-@media (max-width: 900px) {
-  .hero {
-    &__title {
-      font-size: 64px;
-      line-height: 82px;
-    }
-    &__descr {
-      font-size: 36px;
-      line-height: 48px;
-    }
-  }
-}
-@media (max-width: 768px) {
-  .hero {
-    &__title {
-      font-size: 42px;
-      line-height: 56px;
-    }
-    &__descr {
-      font-size: 24px;
-      line-height: 32px;
-    }
-  }
-}
-@media (max-width: 576px) {
-  .hero {
-    &__title {
-      font-size: 28px;
-      line-height: 42px;
-    }
-    &__descr {
-      font-size: 18px;
-      line-height: 26px;
-    }
-  }
-}
+

@@ -24,11 +24,11 @@ const Navbar = () => {
         <Link href="/">
           <a className={styles.logo}>
             <Image
-              width={100}
-              height={100}
+              layout="fill"
               src="/images/logo-header.png"
               alt="HolyFamily logo"
             />
+            Holy Family Gym
           </a>
         </Link>
         <nav className={`${styles.nav} ${active ? styles.navActive : ''}`}>
