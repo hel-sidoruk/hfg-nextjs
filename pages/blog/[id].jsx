@@ -19,7 +19,6 @@ export async function getStaticProps({ params }) {
     `${process.env.NEXT_PUBLIC_HOST}/api/articles/${params.id}`
   );
   const post = response.data;
-  console.log(post);
   return {
     props: {
       post,
@@ -28,11 +27,12 @@ export async function getStaticProps({ params }) {
 }
 
 const ArticlePage = ({ post }) => {
-  const { title, image, text } = post;
+  const { title, image, descr, text } = post;
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{title} | Holy Family Gym</title>
+        <meta name="description" content={descr} />
       </Head>
       <ButtonBack link={'/blog'} />
       <Background page={'blog-page'} />

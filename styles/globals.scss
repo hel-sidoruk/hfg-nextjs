@@ -183,7 +183,9 @@ ul {
   form {
     width: 50%;
     margin-bottom: 50px;
-    box-shadow: 3px 3px 6px 3px rgba(#999, 0.5);
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
   }
 }
 .contacts-home {
