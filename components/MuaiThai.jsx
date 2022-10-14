@@ -11,6 +11,7 @@ const MuaiThai = () => {
           time={'20:00'}
           days={'Понедельник, среда, пятница'}
           trainer={'Виктор Никонов'}
+          to={'#viktor-nikonov'}
         />
       </div>
       <div className={styles.btnBox}>

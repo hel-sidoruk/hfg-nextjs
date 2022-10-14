@@ -1,29 +1,24 @@
 import { useState } from 'react';
 import Text from './UI/Text';
-import { useInView } from 'react-intersection-observer';
 import Title from './UI/Title';
 import ImageAnimated from './UI/ImageAnimated';
-// import Image from 'next/image';
-// import ImageAnimated from './UI/ImageAnimated';
 
 export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
   const textArray = text.replace(/\r/g, '').split('\n').filter(Boolean);
   const [active, setActive] = useState(false);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.4,
-  });
   const openText = () => {
     active ? setActive(false) : setActive(true);
   };
+  const names = {
+    1: 'viktor-nikonov',
+    2: 'evgeniy-rutko',
+    3: 'pavel-staritskiy',
+    4: 'evgeniy-aleshkevich',
+    5: 'nikita-sachno',
+    6: 'evgeniy-akulich',
+  };
   return (
-    <div
-      id={id}
-      ref={ref}
-      className={`${styles.item} ${
-        inView ? styles.imageAnim1 : styles.imageAnim0
-      }`}
-    >
+    <div className={styles.item}>
       <ImageAnimated
         wrapClass={styles.wrapper}
         className={styles.image}
@@ -46,6 +41,7 @@ export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
           ))}
         </div>
       </div>
+      <span aria-hidden={true} id={names[id]} className={styles.hidden}></span>
     </div>
   );
 };

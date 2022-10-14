@@ -80,6 +80,7 @@
   grid-column: span 5;
   align-self: start;
   padding: 20px 10px;
+  padding-bottom: 0;
   pointer-events: none;
   justify-self: start;
   &::after {
@@ -100,9 +101,6 @@
     }
   }
   @media (max-width: 576px) {
-    h3 {
-      font-size: 16px;
-    }
   }
 }
 .box {

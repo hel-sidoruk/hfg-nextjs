@@ -49,6 +49,7 @@
   }
   @media (max-width: 768px) {
     width: 60%;
+    display: block;
   }
   @media (max-width: 576px) {
     width: 100%;
@@ -94,12 +95,20 @@
     &::after {
       transform: scale(1);
     }
+    @media (max-width: 768px) {
+      &::after {
+        content: unset;
+      }
+    }
   }
-
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
 .disabledLink {
   color: #ffdada;
   pointer-events: none;
+  display: inline-block;
   &::after {
     transform: scaleY(1);
     background-color: #ffdada;

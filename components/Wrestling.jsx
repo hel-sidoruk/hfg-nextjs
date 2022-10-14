@@ -15,12 +15,14 @@ const Wrestling = () => {
           time={'8:00 (суббота - 10:00)'}
           days={'Вторник, четверг, суббота'}
           trainer={'Евгений Алешкевич'}
+          to={'#evgeniy-aleshkevich'}
         />
         <GroupItem
           title={'Вечерняя группа'}
           time={'18:30 (суббота - 10:00)'}
           days={'Вторник, четверг, суббота'}
           trainer={'Евгений Алешкевич'}
+          to={'#evgeniy-aleshkevich'}
         />
       </div>
       <div className={styles.btnBox}>

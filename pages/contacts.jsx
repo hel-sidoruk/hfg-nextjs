@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import { useRef } from 'react';
 import RegistrationForm from '../components/RegistrationForm';
 import Background from '../components/UI/Background';
 import MapBlock from '../components/UI/MapBlock';
@@ -10,6 +10,13 @@ import Title from '../components/UI/Title';
 import styles from '../styles/contacts.module.scss';
 
 export default function ContactsPage() {
+  const mapRef = useRef();
+  const handleClick = () => {
+    window.scrollTo({
+      top: mapRef.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
   return (
     <>
       <Head>
@@ -20,13 +27,13 @@ export default function ContactsPage() {
         />
       </Head>
       <Background page={'contacts-page'} />
-      <Section sectionName={'contacts'}>
+      <Section sectionName={styles.contacts}>
         <Title>Контакты</Title>
         <div className={styles.block}>
           <Subtitle variant={styles.subtitle}>Мы находимся по адресу:</Subtitle>
-          <Text variant={styles.text}>
+          <p onClick={handleClick} className={`${styles.text} text`}>
             г. Минск, ул. Михася Лынькова 19/1, вход со двора
-          </Text>
+          </p>
         </div>
         <div className={styles.block}>
           <Subtitle variant={styles.subtitle}>Телефон:</Subtitle>
@@ -43,45 +50,30 @@ export default function ContactsPage() {
         </div>
         <div className={styles.block}>
           <Subtitle variant={styles.subtitle}>Наши социальные сети:</Subtitle>
-          <div className={styles.social}>
-            <div className={styles.image}>
-              <Image layout="fill" src="/icons/vk.svg" alt="vk icon" />
-            </div>
-            <a
-              className={styles.link}
-              target="_blank"
-              href="https://vk.com/bjj_holyfamilygym"
-              rel="noreferrer"
-            >
-              Вконтакте
-            </a>
-          </div>
-          <div className={styles.social}>
-            <div className={styles.image}>
-              <Image layout="fill" src="/icons/instagram.svg" alt="vk icon" />
-            </div>
-            <a
-              className={styles.link}
-              target="_blank"
-              href="https://www.instagram.com/holyfamilygym/"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-          </div>
-          <div className={styles.social}>
-            <div className={styles.image}>
-              <Image layout="fill" src="/icons/fb.svg" alt="vk icon" />
-            </div>
-            <a
-              className={styles.link}
-              target="_blank"
-              href="https://facebook.com/HolyFamilyGym/"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-          </div>
+          <a
+            className={`${styles.link} ${styles.vk}`}
+            target="_blank"
+            href="https://vk.com/bjj_holyfamilygym"
+            rel="noreferrer"
+          >
+            Вконтакте
+          </a>
+          <a
+            className={`${styles.link} ${styles.insta}`}
+            target="_blank"
+            href="https://www.instagram.com/holyfamilygym/"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            className={`${styles.link} ${styles.fb}`}
+            target="_blank"
+            href="https://facebook.com/HolyFamilyGym/"
+            rel="noreferrer"
+          >
+            Facebook
+          </a>
         </div>
         <div className={styles.block}>
           <Text variant={styles.textBig}>
@@ -90,6 +82,7 @@ export default function ContactsPage() {
         </div>
       </Section>
       <RegistrationForm />
+      <span className={styles.hidden} ref={mapRef} aria-hidden={true}></span>
       <MapBlock mapWidth={'100%'} mapHeight={'400px'} />
     </>
   );
