@@ -96,17 +96,6 @@ ul {
       position: relative;
     }
   }
-  &.contacts-home {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      justify-items: center;
-      @media (max-width: 1024px) {
-        grid-template-columns: unset;
-      }
-    }
-  }
 }
 .swiper {
   height: 100%;
@@ -172,58 +161,5 @@ ul {
   &.contacts-page {
     background-image: url('../assets/backgrounds/big-logo.webp');
     filter: blur(2px) brightness(0.6);
-  }
-}
-
-.contacts {
-  padding-top: 150px;
-  .container {
-    padding-bottom: 30px;
-  }
-  @media (max-width: 768px) {
-    padding-top: 110px;
-    padding-bottom: 30px;
-  }
-  form {
-    width: 50%;
-    margin-bottom: 50px;
-    @media (max-width: 1024px) {
-      width: 100%;
-    }
-  }
-}
-.contacts-home {
-  form {
-    width: 80%;
-    background-color: transparent;
-    color: #fbfbfb;
-    align-self: center;
-    @media (max-width: 1280px) {
-      width: 100%;
-    }
-    @media (max-width: 1024px) {
-      padding: 0;
-      width: 100%;
-    }
-    label {
-      display: none;
-    }
-    h3 {
-      font-weight: 600;
-      margin-bottom: 10px;
-      @media (max-width: 1024px) {
-        font-size: 18px;
-      }
-
-    }
-    .dropdown_top__Z29bf {
-      color: #111;
-    }
-    .dropdown_top__Z29bf, li {
-      color: #666;
-    }
-    .btn {
-      text-transform: uppercase;
-    }
   }
 }

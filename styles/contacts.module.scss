@@ -1,7 +1,21 @@
+.contacts {
+  padding-top: 150px;
+  .container {
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 110px;
+    padding-bottom: 30px;
+  }
+  form {
+    margin-bottom: 50px;
+  }
+}
+
 .block {
-  margin-bottom: 40px;
   padding-bottom: 15px;
   &:not(:last-child) {
+    margin-bottom: 40px;
     border-bottom: 1px solid #ddd;
   }
 }

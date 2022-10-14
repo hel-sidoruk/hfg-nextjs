@@ -1,25 +1,24 @@
 .dropdown {
   position: relative;
   width: 100%;
-  background-color: #ddd;
-  border: 2px solid #666;
+  border: 2px solid #fff;
   border-radius: 8px;
   span {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
-    color: #333;
+    color: #fff;
     font-size: 18px;
     pointer-events: none;
-    @media (max-width: 1024px) {
-      font-size: 16px;
-    }
   }
 }
 .disabled {
   pointer-events: none;
   border-color: #999;
+  span {
+    color: #999;
+  }
 }
 .top {
   font-size: 18px;
@@ -29,6 +28,8 @@
   min-height: 54px;
   padding: 15px 20px;
   padding-right: 50px;
+  color: #fff;
+  letter-spacing: 1px;
   &::before {
     content: "";
     position: absolute;
@@ -63,9 +64,6 @@
   font-size: 18px;
   max-height: 200px;
   overflow-y: auto;
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
 .listActive {
   transform: scaleY(1);
@@ -73,14 +71,16 @@
 .item {
   padding: 15px 20px;
   cursor: pointer;
-  background-color: #f4f5f6;
+  background-color: rgba(#000, 0.8);
   transition: all .3s ease-in-out;
+  color: #fff;
   &:not(:last-child) {
     border-bottom: 1px solid #999;
   }
   &:hover {
     padding-left: 25px;
-    background-color: #ddd;
+    background-color: #793a3a;
   }
 }
+
 
