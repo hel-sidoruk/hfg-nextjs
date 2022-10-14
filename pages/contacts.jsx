@@ -42,7 +42,7 @@ export default function ContactsPage() {
           </Text>
         </div>
         <div className={styles.block}>
-          <Subtitle variant={styles.subtitle}>Мы в социальных сетях:</Subtitle>
+          <Subtitle variant={styles.subtitle}>Наши социальные сети:</Subtitle>
           <div className={styles.social}>
             <div className={styles.image}>
               <Image layout="fill" src="/icons/vk.svg" alt="vk icon" />
@@ -88,8 +88,8 @@ export default function ContactsPage() {
             Мы выдаем всю необходимую экипировку для занятий
           </Text>
         </div>
-        <RegistrationForm />
       </Section>
+      <RegistrationForm />
       <MapBlock mapWidth={'100%'} mapHeight={'400px'} />
     </>
   );
