@@ -8,9 +8,7 @@ const Text = ({ variant, children }) => {
   return (
     <p
       ref={ref}
-      className={`text ${variant || ''} ${
-        inView ? 'opacity-1 anim-1' : 'opacity-0 anim-0'
-      }`}
+      className={`text ${variant || ''} ${inView ? 'opacity-1' : 'opacity-0'}`}
     >
       {children}
     </p>

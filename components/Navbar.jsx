@@ -24,6 +24,7 @@ const Navbar = () => {
         <Link href="/">
           <a className={styles.logo}>
             <Image
+              priority={true}
               layout="fill"
               src="/images/logo-header.png"
               alt="HolyFamily logo"

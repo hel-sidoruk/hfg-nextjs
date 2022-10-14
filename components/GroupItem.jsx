@@ -1,23 +1,13 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import styles from '../styles/group.module.scss';
 
-const GroupItem = ({ title, time, days, trainer, first }) => {
-  const [active, setActive] = useState(false);
-  function openDescr() {
-    if (innerWidth > 640) return;
-    active ? setActive(false) : setActive(true);
-  }
-  useEffect(() => {
-    if (innerWidth > 640) return;
-    first && setActive(true);
-  }, [first]);
+const GroupItem = ({ title, time, days, trainer }) => {
   return (
-    <div className={`${styles.item} ${active ? styles.itemActive : ''}`}>
-      <div className={styles.top} onClick={openDescr}>
+    <div className={styles.item}>
+      <div className={styles.top}>
         <h3 className={styles.title}>{title}</h3>
       </div>
-      <div className={`${styles.descr} ${active ? styles.descrActive : ''}`}>
+      <div className={styles.descr}>
         <div className={styles.field}>
           <span className={styles.smallText}>Время:</span>
           <p className={styles.text}>{time}</p>
@@ -33,12 +23,6 @@ const GroupItem = ({ title, time, days, trainer, first }) => {
           </Link>
         </div>
       </div>
-      <button
-        className={`${styles.close} ${active ? styles.closeActive : ''}`}
-        onClick={openDescr}
-      >
-        Свернуть расписание
-      </button>
     </div>
   );
 };

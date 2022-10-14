@@ -11,7 +11,6 @@ const Taekwondo = () => {
           time={'18:00'}
           days={'Понедельник, среда, пятница'}
           trainer={'Тимофей Старовойтов'}
-          first={true}
         />
       </div>
       <div className={styles.btnBox}>
