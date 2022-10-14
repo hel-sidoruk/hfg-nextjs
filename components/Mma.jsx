@@ -11,6 +11,7 @@ const Mma = () => {
           time={'18:30'}
           days={'Понедельник, среда, пятница'}
           trainer={'Павел Старицкий'}
+          to={'#pavel-staritskiy'}
         />
       </div>
       <div className={styles.btnBox}>

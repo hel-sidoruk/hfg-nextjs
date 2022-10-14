@@ -106,7 +106,7 @@
 }
 @media (max-width: 1024px) {
   .about-content {
-    padding: 50px 0;
+    padding: 60px 0;
     .title {
       margin-bottom: 32px;
     }
@@ -183,7 +183,6 @@
     margin-bottom: 10px;
   }
   .about-content {
-    padding: 30px 0;
     .title {
       margin-bottom: 15px;
     }
@@ -193,8 +192,6 @@
     }
     &__block {
       .text {
-        font-size: 12px;
-        line-height: 20px;
         grid-column: span 2;
       }
       &.middle .text:first-child {

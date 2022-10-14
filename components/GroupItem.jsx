@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '../styles/group.module.scss';
 
-const GroupItem = ({ title, time, days, trainer }) => {
+const GroupItem = ({ title, time, days, trainer, to }) => {
   return (
     <div className={styles.item}>
       <div className={styles.top}>
@@ -18,7 +18,7 @@ const GroupItem = ({ title, time, days, trainer }) => {
         </div>
         <div className={styles.field}>
           <span className={styles.smallText}>Тренер:</span>
-          <Link href="/trainers">
+          <Link href={`/trainers${to}`} scroll={false}>
             <a className={`${styles.text} ${styles.link}`}>{trainer}</a>
           </Link>
         </div>

@@ -19,18 +19,21 @@ const Bjj = () => {
           time={'7:30'}
           days={'Понедельник, среда, пятница'}
           trainer={'Евгений Рутко'}
+          to={'#evgeniy-rutko'}
         />
         <GroupItem
           title={'Группа для начинающих'}
           time={'18:30'}
           days={'Вторник, четверг'}
           trainer={'Никита Сахно'}
+          to={'#nikita-sachno'}
         />
         <GroupItem
           title={'Основная группа'}
           time={'20:00 (суббота - 11:00)'}
           days={'Вторник, четверг, суббота'}
           trainer={'Виктор Никонов'}
+          to={'#viktor-nikonov'}
         />
       </div>
       <div className={styles.btnBox}>

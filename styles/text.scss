@@ -42,10 +42,6 @@
   line-height: 36px;
   color: #fbfbfb;
   transition: all .7s ease-in-out;
-  &.black {
-    color: #111;
-    font-weight: 600;
-  }
   &.space {
     letter-spacing: 1px;
     line-height: 38px;
@@ -53,7 +49,7 @@
   }
   &.fz-20 {
     font-size: 20px;
-    line-height: 32px;
+    line-height: 36px;
     b {
       text-transform: uppercase;
     }
@@ -105,11 +101,11 @@
 }
 
 @media (max-width: 576px) {
-  .title {
-    font-size: 18px;
-    margin-bottom: 15px;
-    line-height: 24px;
-  }
+  // .title {
+  //   font-size: 18px;
+  //   margin-bottom: 15px;
+  //   line-height: 24px;
+  // }
   .text.space {
     line-height: 22px;
   }

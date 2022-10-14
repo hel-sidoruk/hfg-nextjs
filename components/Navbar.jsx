@@ -32,7 +32,10 @@ const Navbar = () => {
             Holy Family Gym
           </a>
         </Link>
-        <nav className={`${styles.nav} ${active ? styles.navActive : ''}`}>
+        <nav
+          onClick={() => setActive(false)}
+          className={`${styles.nav} ${active ? styles.navActive : ''}`}
+        >
           {navigationRoutes.map(({ id, to, text }) => (
             <Link key={id} href={to}>
               <a

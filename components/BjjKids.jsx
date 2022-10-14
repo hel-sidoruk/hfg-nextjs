@@ -13,12 +13,14 @@ const BjjKids = () => {
           time={'18:30'}
           days={'Понедельник, среда, пятница'}
           trainer={'Никита Сахно'}
+          to={'#nikita-sachno'}
         />
         <GroupItem
           title={'Детская группа (10-14 лет)'}
           time={'19:00'}
           days={'Вторник, четверг'}
           trainer={'Евгений Акулич'}
+          to={'#evgeniy-akulich'}
         />
       </div>
       <div className={styles.btnBox}>
