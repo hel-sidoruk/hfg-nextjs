@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import TableHead from './UI/TableHead';
 import TableRow from './UI/TableRow';
 
@@ -6,16 +5,17 @@ const Schedule = ({ schedule, styles }) => {
   const monTueWen = schedule.filter(
     (el) => el.day.includes('Понедельник') || el.day.includes('Вторник')
   );
-  const timeArray1 = useMemo(() => {
-    return Array.from(new Set(monTueWen.map((el) => el.time))).sort((a, b) =>
-      Number(a.replace(':', '')) > Number(b.replace(':', '')) ? 1 : -1
-    );
-  }, [monTueWen]);
-  const timeArray2 = useMemo(() => {
-    return Array.from(new Set(schedule.map((el) => el.time))).sort((a, b) =>
-      Number(a.replace(':', '')) > Number(b.replace(':', '')) ? 1 : -1
-    );
-  }, [schedule]);
+  const timeArray1 = ['7:30', '8:00', '18:00', '18:30', '19:00', '20:00'];
+  const timeArray2 = [
+    '7:30',
+    '8:00',
+    '11:00',
+    '12:00',
+    '18:00',
+    '18:30',
+    '19:00',
+    '20:00',
+  ];
   const monTueWenArray = ['Понедельник', 'Вторник', 'Среда'];
   const thurFrSatArray = ['Четверг', 'Пятница', 'Суббота'];
 

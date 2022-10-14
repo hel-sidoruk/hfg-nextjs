@@ -174,13 +174,7 @@ ul {
     filter: blur(2px) brightness(0.6);
   }
 }
-.article-skeleton {
-  height: 450px;
-  background-color: white;
-  @media (max-width: 640px) {
-    height: 360px;
-  }
-}
+
 .contacts {
   padding-top: 150px;
   .container {

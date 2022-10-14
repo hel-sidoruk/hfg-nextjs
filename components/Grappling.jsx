@@ -11,7 +11,6 @@ const Grappling = () => {
           time={'20:00'}
           days={'Понедельник, среда, пятница'}
           trainer={'Евгений Рутко'}
-          first={true}
         />
       </div>
       <div className={styles.btnBox}>

@@ -11,7 +11,6 @@ const Wrestling = () => {
           time={'8:00 (суббота - 10:00)'}
           days={'Вторник, четверг, суббота'}
           trainer={'Евгений Алешкевич'}
-          first={true}
         />
         <GroupItem
           title={'Вечерняя группа'}

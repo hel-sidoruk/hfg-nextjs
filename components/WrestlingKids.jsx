@@ -11,7 +11,6 @@ const WrestlingKids = () => {
           time={'18:30'}
           days={'Вторник, четверг'}
           trainer={'Евгений Алешкевич'}
-          first={true}
         />
       </div>
       <div className={styles.btnBox}>

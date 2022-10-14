@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import ScheduleBlock from './UI/ScheduleBlock';
 
 const ScheduleMobile = ({ schedule, styles }) => {
@@ -6,17 +5,9 @@ const ScheduleMobile = ({ schedule, styles }) => {
   const tueThur = schedule.filter((el) => el.day.includes('Вторник'));
   const saturday = schedule.filter((el) => el.day.includes('Суббота'));
 
-  const timeArray1 = useMemo(() => {
-    return Array.from(new Set(monWenFr.map((el) => el.time)));
-  }, [monWenFr]);
-
-  const timeArray2 = useMemo(() => {
-    return Array.from(new Set(tueThur.map((el) => el.time)));
-  }, [tueThur]);
-
-  const timeArray3 = useMemo(() => {
-    return Array.from(new Set(saturday.map((el) => el.time)));
-  }, [saturday]);
+  const timeArray1 = ['7:30', '18:00', '18:30', '19:00', '20:00'];
+  const timeArray2 = ['8:00', '18:30', '20:00'];
+  const timeArray3 = ['11:00', '12:00'];
 
   return (
     <div className={styles.mobile}>

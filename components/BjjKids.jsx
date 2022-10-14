@@ -13,7 +13,6 @@ const BjjKids = () => {
           time={'18:30'}
           days={'Понедельник, среда, пятница'}
           trainer={'Никита Сахно'}
-          first={true}
         />
         <GroupItem
           title={'Детская группа (10-14 лет)'}

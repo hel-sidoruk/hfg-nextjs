@@ -34,8 +34,8 @@
   animation: skeleton-loading 1s linear infinite alternate;
   position: relative;
   height: 450px;
-  @media (max-width: 1024px) {
-    height: 300px;
+  @media (max-width: 640px) {
+    height: 360px;
   }
 }
 .skeletBottom {
@@ -50,10 +50,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media (max-width: 1280px) {
-    padding-top: 15px;
-    transform: translateY(45%);
-  }
 }
 .textSkelet {
   height: 20px;
