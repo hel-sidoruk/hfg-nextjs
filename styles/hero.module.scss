@@ -12,9 +12,6 @@
     right: 0;
     background-color: rgba(#000, 0.5);
   }
-  @media (max-width: 768px) {
-    height: 65vh;
-  }
 }
 .container {
   display: flex;
@@ -22,6 +19,10 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
+  @media (max-width: 768px) {
+    justify-content: flex-end;
+    padding-bottom: 12vh;
+  }
 }
 .title {
   font-weight: 700;
@@ -62,6 +63,9 @@
   right: 0;
   height: 100%;
   z-index: -1;
+  @media (max-width: 768px) {
+    height: 65vh;
+  }
 }
 .descr {
   font-size: 65px;
