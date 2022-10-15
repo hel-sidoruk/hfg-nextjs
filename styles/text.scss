@@ -85,28 +85,10 @@
     line-height: 30px;
   }
 }
-
-@media (max-width: 900px) {
-  .text.space {
-    font-size: 14px;
-    line-height: 26px;
-  }
-}
 @media (max-width: 768px) {
   .title {
     font-size: 24px;
     margin-bottom: 20px;
     line-height: 32px;
-  }
-}
-
-@media (max-width: 576px) {
-  // .title {
-  //   font-size: 18px;
-  //   margin-bottom: 15px;
-  //   line-height: 24px;
-  // }
-  .text.space {
-    line-height: 22px;
   }
 }
