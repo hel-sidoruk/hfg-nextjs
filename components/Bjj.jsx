@@ -2,15 +2,10 @@ import GroupItem from './GroupItem';
 import ImageAnimated from './UI/ImageAnimated';
 import Text from './UI/Text';
 import Title from './UI/Title';
-import BjjImage from '../public/images/disciplines/bjj.webp';
-import BjjImage2 from '../public/images/disciplines/bjj2.webp';
-import BjjImage3 from '../public/images/disciplines/bjj3.webp';
-import BjjImage4 from '../public/images/disciplines/bjj4.webp';
 import Subtitle from './UI/Subtitle';
 import Link from 'next/link';
-import styles from '../styles/discipline.module.scss';
 
-const Bjj = () => {
+const Bjj = ({ styles }) => {
   return (
     <>
       <div className={styles.group}>
@@ -56,7 +51,7 @@ const Bjj = () => {
           </Text>
           <ImageAnimated
             priority={true}
-            src={BjjImage2}
+            src={'/images/disciplines/bjj6.webp'}
             className={styles.image}
             alt={'Бразильское джиу-джитсу'}
           />
@@ -73,7 +68,7 @@ const Bjj = () => {
         </Text>
         <div className={styles.block}>
           <ImageAnimated
-            src={BjjImage3}
+            src={'/images/disciplines/bjj7.webp'}
             className={`${styles.image} ${styles.imageLeft}`}
             alt={'Бразильское джиу-джитсу'}
           />
@@ -91,16 +86,29 @@ const Bjj = () => {
             </Text>
           </div>
         </div>
-        <Subtitle>Отдых и победа над стрессом</Subtitle>
-        <Text>
-          Энергичные, злые и весёлые тренировки по-настоящему расслабляют, дают
-          вытолкнуть из себя негативную энергию, победить многочисленные стрессы
-          и, в конце концов, получить заслуженный десерт из эндорфинов. Наш
-          спорт учит отделять главное от второстепенного и будит так часто
-          дремлющую силу любви к себе.
-        </Text>
-
         <div className={`${styles.block} ${styles.right}`}>
+          <div>
+            <Subtitle>Отдых и победа над стрессом</Subtitle>
+            <Text>
+              Энергичные, злые и весёлые тренировки по-настоящему расслабляют,
+              дают вытолкнуть из себя негативную энергию, победить
+              многочисленные стрессы и, в конце концов, получить заслуженный
+              десерт из эндорфинов. Наш спорт учит отделять главное от
+              второстепенного и будит так часто дремлющую силу любви к себе.
+            </Text>
+          </div>
+          <ImageAnimated
+            src={'/images/disciplines/bjj10.webp'}
+            className={`${styles.image} ${styles.imageLeft}`}
+            alt={'Бразильское джиу-джитсу'}
+          />
+        </div>
+        <div className={styles.block}>
+          <ImageAnimated
+            src={'/images/disciplines/bjj5.webp'}
+            className={styles.image}
+            alt={'Бразильское джиу-джитсу'}
+          />
           <div>
             <Subtitle>Сила</Subtitle>
             <Text variant={'right'}>
@@ -113,18 +121,8 @@ const Bjj = () => {
               заниматься бразильским джиу-джитсу и выступать на соревнованиях.
             </Text>
           </div>
-          <ImageAnimated
-            src={BjjImage}
-            className={styles.image}
-            alt={'Бразильское джиу-джитсу'}
-          />
         </div>
-        <div className={styles.block}>
-          <ImageAnimated
-            src={BjjImage4}
-            className={`${styles.image} ${styles.imageLeft}`}
-            alt={'Бразильское джиу-джитсу'}
-          />
+        <div className={`${styles.block} ${styles.right}`}>
           <div>
             <Subtitle>Дисциплина</Subtitle>
             <Text>
@@ -134,14 +132,19 @@ const Bjj = () => {
               преодолением страхов и сомнений, даже проходя через целительный
               опыт поражений, мы становимся спокойнее и учимся внимательно
               относиться к своим делам в повседневной жизни. Когда ты на ковре,
-              ты понимаешь, что результат в ближайшие пять минут - это
-              ррезультат твоего упорства в предыдущие месяцы труда. Такой подход
+              ты понимаешь, что результат в ближайшие пять минут - это результат
+              твоего упорства в предыдущие месяцы труда. Такой подход
               переносится в работу и другие сферы жизни. Приходит понимание, что
               для победы на пути к цели нужны настоящие старание, терпение,
               физический и душевный вклад в дело. Иначе руку в финале поднимут
               не вам.
             </Text>
           </div>
+          <ImageAnimated
+            src={'/images/disciplines/bjj9.webp'}
+            className={`${styles.image} ${styles.imageLeft}`}
+            alt={'Бразильское джиу-джитсу'}
+          />
         </div>
         <Text>
           Каждый находит в бразильском джиу-джитсу что-то своё: кураж,

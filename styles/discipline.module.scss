@@ -85,3 +85,9 @@
 .imageLeft {
   box-shadow: 3px 3px 7px 4px rgba(#000, 0.6);
 }
+.centered {
+  justify-content: center;
+}
+.noRadius {
+  border-radius: unset;
+}

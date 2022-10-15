@@ -1,15 +1,14 @@
 import GroupItem from './GroupItem';
-import styles from '../styles/discipline.module.scss';
 import Link from 'next/link';
 import Text from './UI/Text';
 import Subtitle from './UI/Subtitle';
 import ImageAnimated from './UI/ImageAnimated';
 import Title from './UI/Title';
 
-const Grappling = () => {
+const Grappling = ({ styles }) => {
   return (
     <>
-      <div className={styles.group}>
+      <div className={`${styles.group} ${styles.centered}`}>
         <GroupItem
           title={'Утренняя группа'}
           time={'20:00'}
@@ -37,7 +36,7 @@ const Grappling = () => {
           </Text>
           <ImageAnimated
             priority={true}
-            src={'/images/disciplines/grappling1.webp'}
+            src={'/images/disciplines/grappling7.webp'}
             className={styles.image}
             alt={'Грэпплинг'}
           />

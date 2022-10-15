@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Mma = () => {
   return (
     <>
-      <div className={styles.group}>
+      <div className={`${styles.group} ${styles.centered}`}>
         <GroupItem
           title={'Утренняя группа'}
           time={'18:30'}

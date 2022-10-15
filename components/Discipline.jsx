@@ -1,10 +1,14 @@
 import Section from './UI/Section';
 import Title from './UI/Title';
 
-const Discipline = ({ title, children }) => {
+const Discipline = ({ title, children, centered }) => {
   return (
     <Section sectionName={'disciplines'}>
-      <Title>{title}</Title>
+      {centered ? (
+        <Title variant={'align-center'}>{title}</Title>
+      ) : (
+        <Title>{title}</Title>
+      )}
       {children}
     </Section>
   );

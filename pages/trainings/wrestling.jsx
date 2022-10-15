@@ -8,7 +8,11 @@ const WrestlingPage = () => {
   return (
     <>
       <Head>
-        <title>Вольная борьба</title>
+        <title>Вольная борьба | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Тренировки по вольной борьбе в зале единоборств Holy Family Gym в Минске"
+        />
       </Head>
       <ButtonBack />
       <Background page={'trains-page'} />

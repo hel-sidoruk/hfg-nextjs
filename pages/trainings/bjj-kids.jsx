@@ -8,7 +8,11 @@ const BjjKidsPage = () => {
   return (
     <>
       <Head>
-        <title>Бразильское джиу-джитсу для детей</title>
+        <title>Бразильское джиу-джитсу для детей | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Детские тренировки по бразильскому джиу-джитсу в зале единоборств Holy Family Gym в Минске"
+        />
       </Head>
       <ButtonBack />
       <Background page={'trains-page'} />
