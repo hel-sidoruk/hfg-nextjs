@@ -1,6 +1,6 @@
 import GroupItem from './GroupItem';
 import styles from '../styles/discipline.module.scss';
-import Link from 'next/link';
+import SignLink from './UI/SignLink';
 
 const Mma = () => {
   return (
@@ -14,13 +14,7 @@ const Mma = () => {
           to={'#pavel-staritskiy'}
         />
       </div>
-      <div className={styles.btnBox}>
-        <Link href="/contacts#form">
-          <a className={`btn btn-fill ${styles.btn}`}>
-            Записаться на тренировку
-          </a>
-        </Link>
-      </div>
+      <SignLink />
     </>
   );
 };

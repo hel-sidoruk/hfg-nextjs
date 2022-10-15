@@ -1,9 +1,9 @@
 import GroupItem from './GroupItem';
-import Link from 'next/link';
 import Text from './UI/Text';
 import Subtitle from './UI/Subtitle';
 import ImageAnimated from './UI/ImageAnimated';
 import Title from './UI/Title';
+import SignLink from './UI/SignLink';
 
 const Grappling = ({ styles }) => {
   return (
@@ -16,13 +16,7 @@ const Grappling = ({ styles }) => {
           trainer={'Евгений Рутко'}
         />
       </div>
-      <div className={styles.btnBox}>
-        <Link href="/contacts#form" scroll={false}>
-          <a className={`btn btn-fill ${styles.btn}`}>
-            Записаться на тренировку
-          </a>
-        </Link>
-      </div>
+      <SignLink />
       <div className="discipline-info">
         <div className={`${styles.block} ${styles.right}`}>
           <Text variant="fz-20">

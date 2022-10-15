@@ -1,10 +1,10 @@
 import GroupItem from './GroupItem';
 import styles from '../styles/discipline.module.scss';
-import Link from 'next/link';
 import Subtitle from './UI/Subtitle';
 import Text from './UI/Text';
 import ImageAnimated from './UI/ImageAnimated';
 import Title from './UI/Title';
+import SignLink from './UI/SignLink';
 
 const Wrestling = () => {
   return (
@@ -25,13 +25,7 @@ const Wrestling = () => {
           to={'#evgeniy-aleshkevich'}
         />
       </div>
-      <div className={styles.btnBox}>
-        <Link href="/contacts#form">
-          <a className={`btn btn-fill ${styles.btn}`}>
-            Записаться на тренировку
-          </a>
-        </Link>
-      </div>
+      <SignLink />
       <div className="discipline-info">
         <div className={`${styles.block} ${styles.right}`}>
           <Text variant="fz-20">

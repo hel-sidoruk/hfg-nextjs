@@ -2,8 +2,8 @@ import GroupItem from './GroupItem';
 import Text from './UI/Text';
 import Title from './UI/Title';
 import styles from '../styles/discipline.module.scss';
-import Link from 'next/link';
 import ImageAnimated from './UI/ImageAnimated';
+import SignLink from './UI/SignLink';
 
 const BjjKids = () => {
   return (
@@ -24,13 +24,7 @@ const BjjKids = () => {
           to={'#evgeniy-akulich'}
         />
       </div>
-      <div className={styles.btnBox}>
-        <Link href="/contacts#form">
-          <a className={`btn btn-fill ${styles.btn}`}>
-            Записаться на тренировку
-          </a>
-        </Link>
-      </div>
+      <SignLink />
       <div className="discipline-info">
         <div className={`${styles.block} ${styles.right}`}>
           <Text variant="fz-20">

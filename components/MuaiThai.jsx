@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import GroupItem from './GroupItem';
 import styles from '../styles/discipline.module.scss';
 import Text from './UI/Text';
 import ImageAnimated from './UI/ImageAnimated';
+import SignLink from './UI/SignLink';
 
 const MuaiThai = () => {
   return (
@@ -16,13 +16,7 @@ const MuaiThai = () => {
           to={'#viktor-nikonov'}
         />
       </div>
-      <div className={styles.btnBox}>
-        <Link href="/contacts#form">
-          <a className={`btn btn-fill ${styles.btn}`}>
-            Записаться на тренировку
-          </a>
-        </Link>
-      </div>
+      <SignLink />
       <div className="discipline-info">
         <div className={`${styles.block} ${styles.right}`}>
           <Text variant={'fz-20'}>

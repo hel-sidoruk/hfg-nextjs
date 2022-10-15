@@ -6,6 +6,7 @@ import Title from '../components/UI/Title';
 import ScheduleMobile from '../components/ScheduleMobile';
 import Schedule from '../components/Schedule';
 import styles from '../styles/schedule.module.scss';
+import SignLink from '../components/UI/SignLink';
 
 export async function getStaticProps() {
   const response = await axios.get(
@@ -31,6 +32,7 @@ export default function SchedulePage({ schedule }) {
         <Title>Тренировки</Title>
         <Schedule styles={styles} schedule={schedule} />
         <ScheduleMobile styles={styles} schedule={schedule} />
+        <SignLink />
       </Section>
     </>
   );

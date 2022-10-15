@@ -1,6 +1,7 @@
 import Text from './UI/Text';
 import ImageAnimated from './UI/ImageAnimated';
 import Subtitle from './UI/Subtitle';
+import Link from 'next/link';
 
 const OpenMat = ({ styles }) => {
   return (
@@ -61,17 +62,33 @@ const OpenMat = ({ styles }) => {
           className={`${styles.image} ${styles.imageLeft}`}
           alt={'Открытый ковер'}
         />
-        <Text>
-          Наше мероприятие открытое для всех и абсолютно бесплатное. Ждем всех
-          поклонников грэпплинга, бразильского джиу-джитсу, ММА, самбо, и просто
-          любителей техничной борьбы в партере у нас каждую субботу в 12.00 на
-          Лынькова 19.
-        </Text>
+        <div>
+          <Text>
+            Наше мероприятие открытое для всех и абсолютно бесплатное. Ждем всех
+            поклонников грэпплинга, бразильского джиу-джитсу, ММА, самбо, и
+            просто любителей техничной борьбы в партере у нас каждую субботу в
+            12.00 на Лынькова 19.
+          </Text>
+          <Text variant={'fz-20'}>
+            Если у Вас появились какие-то вопросы, с удовольствием ответим на
+            них по телефону:{' '}
+            <a
+              style={{ display: 'block' }}
+              className={styles.link}
+              href="tel:+375292765915"
+            >
+              + 375(29) 276-59-15
+            </a>
+          </Text>
+        </div>
       </div>
-      <Text variant={'fz-20'}>
-        Если у Вас появились какие-то вопросы, с удовольствием ответим на них по
-        телефону: + 375(29) 276-59-15
-      </Text>
+      <div className={styles.btnBox} style={{ marginBottom: 0 }}>
+        <Link href="/contacts#form">
+          <a className={`btn btn-fill ${styles.btn}`}>
+            Записаться на тренировку
+          </a>
+        </Link>
+      </div>
     </div>
   );
 };
