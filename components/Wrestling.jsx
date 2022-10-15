@@ -26,7 +26,7 @@ const Wrestling = () => {
         />
       </div>
       <div className={styles.btnBox}>
-        <Link href="/contacts">
+        <Link href="/contacts#form">
           <a className={`btn btn-fill ${styles.btn}`}>
             Записаться на тренировку
           </a>
@@ -44,12 +44,12 @@ const Wrestling = () => {
             умение постоять за себя в непростой ситуации – этому научат
             тренировки по вольной борьбе.
           </Text>
-          {/* <ImageAnimated
+          <ImageAnimated
             priority={true}
-            src={BjjImage2}
+            src={'/images/disciplines/wrestling1.webp'}
             className={styles.image}
-            alt={'Бразильское джиу-джитсу'}
-          /> */}
+            alt={'Вольная борьба'}
+          />
         </div>
         <Title>Что дают тренировки по бразильскому джиу-джитсу?</Title>
         <Subtitle>Уверенность в себе</Subtitle>
@@ -81,11 +81,11 @@ const Wrestling = () => {
           анализировать ситуацию и быстро принимать решение.
         </Text>
         <div className={styles.block}>
-          {/* <ImageAnimated
-            src={BjjImage3}
+          <ImageAnimated
+            src={'/images/disciplines/wrestling2.webp'}
             className={`${styles.image} ${styles.imageLeft}`}
-            alt={'Бразильское джиу-джитсу'}
-          /> */}
+            alt={'Вольная борьба'}
+          />
           <div>
             <Subtitle>Отличная фигура</Subtitle>
             <Text variant={'right'}>
@@ -113,27 +113,27 @@ const Wrestling = () => {
           <div>
             <Subtitle>Сила</Subtitle>
             <Text variant={'right'}>
-              Бразильское джиу-джитсу развивает в Вас силу. Силу мышц, силу
-              интеллекта и личности, силу упорства и даже силу наших взглядов.
-              Учит нас мастерству настойчивости - умению находить и использовать
-              силу и вдохновение в самих себе и в окружающем мире. Главный
-              секрет состоит в том, что у нашего спорта нет возрастных или
-              половых ограничений. Любой человек в любом возрасте может начать
+              Вольная борьба развивает в Вас силу. Силу мышц, силу интеллекта и
+              личности, силу упорства и даже силу наших взглядов. Учит нас
+              мастерству настойчивости - умению находить и использовать силу и
+              вдохновение в самих себе и в окружающем мире. Главный секрет
+              состоит в том, что у нашего спорта нет возрастных или половых
+              ограничений. Любой человек в любом возрасте может начать
               заниматься бразильским джиу-джитсу и выступать на соревнованиях.
             </Text>
           </div>
-          {/* <ImageAnimated
-            src={BjjImage}
+          <ImageAnimated
+            src={'/images/disciplines/wrestling3.webp'}
             className={styles.image}
-            alt={'Бразильское джиу-джитсу'}
-          /> */}
+            alt={'Вольная борьба'}
+          />
         </div>
         <div className={styles.block}>
-          {/* <ImageAnimated
-            src={BjjImage4}
+          <ImageAnimated
+            src={'/images/disciplines/wrestling4.webp'}
             className={`${styles.image} ${styles.imageLeft}`}
-            alt={'Бразильское джиу-джитсу'}
-          /> */}
+            alt={'Вольная борьба'}
+          />
           <div>
             <Subtitle>Дисциплина</Subtitle>
             <Text>

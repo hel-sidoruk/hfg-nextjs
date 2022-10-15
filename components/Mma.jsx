@@ -15,7 +15,7 @@ const Mma = () => {
         />
       </div>
       <div className={styles.btnBox}>
-        <Link href="/contacts">
+        <Link href="/contacts#form">
           <a className={`btn btn-fill ${styles.btn}`}>
             Записаться на тренировку
           </a>
