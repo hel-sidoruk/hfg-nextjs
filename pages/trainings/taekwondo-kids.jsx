@@ -8,11 +8,15 @@ const TaekwondoKidsPage = () => {
   return (
     <>
       <Head>
-        <title>Таэквондо</title>
+        <title>Таэквондо | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Детские тренировки по таэквондо в зале единоборст Holy Family Gym Минск, ул. Лынькова 19"
+        />
       </Head>
       <ButtonBack />
       <Background page={'trains-page'} />
-      <Discipline title="Таэквондо">
+      <Discipline title="Таэквондо" centered>
         <Taekwondo />
       </Discipline>
     </>

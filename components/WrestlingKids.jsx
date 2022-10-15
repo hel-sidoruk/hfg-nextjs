@@ -5,7 +5,7 @@ import Link from 'next/link';
 const WrestlingKids = () => {
   return (
     <>
-      <div className={styles.group}>
+      <div className={`${styles.group} ${styles.centered}`}>
         <GroupItem
           title={'Детская группа'}
           time={'18:30'}

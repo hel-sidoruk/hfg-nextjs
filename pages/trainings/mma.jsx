@@ -8,11 +8,15 @@ const MmaPage = () => {
   return (
     <>
       <Head>
-        <title>MMA</title>
+        <title>MMA | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Тренировки по смешанным единоборствам (ММА) в зале единоборст Holy Family Gym Минск"
+        />
       </Head>
       <ButtonBack />
       <Background page={'trains-page'} />
-      <Discipline title="MMA">
+      <Discipline title="MMA" centered>
         <Mma />
       </Discipline>
     </>

@@ -8,11 +8,15 @@ const ThaiPage = () => {
   return (
     <>
       <Head>
-        <title>Тайский бокс</title>
+        <title>Тайский бокс | Holy Family Gym Минск</title>
+        <meta
+          name="description"
+          content="Тренировки по тайскому боксу в зале единоборств Holy Family Gym в Минске"
+        />
       </Head>
       <ButtonBack />
       <Background page={'trains-page'} />
-      <Discipline title="Тайский бокс">
+      <Discipline title="Тайский бокс" centered>
         <MuaiThai />
       </Discipline>
     </>
