@@ -81,6 +81,7 @@ export default function ContactsPage() {
           </Text>
         </div>
       </Section>
+      <span className={styles.hidden} id="form" aria-hidden="true"></span>
       <RegistrationForm />
       <span className={styles.hidden} ref={mapRef} aria-hidden={true}></span>
       <MapBlock mapWidth={'100%'} mapHeight={'400px'} />

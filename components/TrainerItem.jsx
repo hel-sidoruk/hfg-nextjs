@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Text from './UI/Text';
 import Title from './UI/Title';
+import Subtitle from './UI/Subtitle';
 import ImageAnimated from './UI/ImageAnimated';
 
 export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
@@ -27,9 +28,9 @@ export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
       />
       <div className={styles.info}>
         <Title variant={styles.title}>{name}</Title>
-        <Title variant={styles.disciplines}>{disciplines}</Title>
+        <Subtitle variant={styles.disciplines}>{disciplines}</Subtitle>
         <div
-          className={`t${styles.textBlock} ${
+          className={`${styles.textBlock} ${
             active ? styles.textBlockActive : ''
           }`}
           onClick={openText}

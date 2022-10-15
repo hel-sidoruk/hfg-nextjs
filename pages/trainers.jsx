@@ -35,7 +35,7 @@ export default function TrainersPage({ trainers }) {
           <Link href="/schedule">
             <a className={`btn ${styles.btn}`}>Открыть расписание</a>
           </Link>
-          <Link href="/contacts">
+          <Link href="/contacts#form">
             <a className={`btn ${styles.btn}`}>Записаться на тренировку</a>
           </Link>
         </div>
