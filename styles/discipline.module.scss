@@ -10,34 +10,6 @@
 .infoTop {
   align-items: center;
 }
-.btnBox {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-.btn {
-  text-transform: uppercase;
-  padding: 20px 40px;
-  font-size: 20px;
-  margin: 0 auto;
-  display: inline-block;
-  @media (max-width: 900px) {
-    padding: 12px 30px;
-    font-size: 18px;
-  }
-  @media (max-width: 576px) {
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    &:not(:last-child) {
-      margin-bottom: 12px;
-    }
-  }
-  @media (max-width: 380px) {
-    font-size: 16px;
-    padding: 12px 10px;
-  }
-}
 .block {
   display: grid;
   grid-gap: 30px;
@@ -90,4 +62,12 @@
 }
 .noRadius {
   border-radius: unset;
+}
+.link {
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all .3s ease-in-out;
+  &:hover {
+    color: #A44848;
+  }
 }

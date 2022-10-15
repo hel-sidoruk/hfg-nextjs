@@ -3,7 +3,7 @@ import ImageAnimated from './UI/ImageAnimated';
 import Text from './UI/Text';
 import Title from './UI/Title';
 import Subtitle from './UI/Subtitle';
-import Link from 'next/link';
+import SignLink from './UI/SignLink';
 
 const Bjj = ({ styles }) => {
   return (
@@ -31,13 +31,7 @@ const Bjj = ({ styles }) => {
           to={'#viktor-nikonov'}
         />
       </div>
-      <div className={styles.btnBox}>
-        <Link href="/contacts#form">
-          <a className={`btn btn-fill ${styles.btn}`}>
-            Записаться на тренировку
-          </a>
-        </Link>
-      </div>
+      <SignLink />
       <div className="discipline-info">
         <div className={`${styles.block} ${styles.right}`}>
           <Text variant="fz-20">
