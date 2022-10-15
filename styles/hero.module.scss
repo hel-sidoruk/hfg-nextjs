@@ -12,6 +12,9 @@
     right: 0;
     background-color: rgba(#000, 0.5);
   }
+  @media (max-width: 768px) {
+    box-shadow: none;
+  }
 }
 .container {
   display: flex;
