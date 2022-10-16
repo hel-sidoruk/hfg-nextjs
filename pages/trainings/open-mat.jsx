@@ -18,7 +18,7 @@ const OpenMatPage = () => {
       </Head>
       <ButtonBack />
       <Background page={'trains-page'} />
-      <Discipline title="Бразильское джиу-джитсу">
+      <Discipline title="Открытый ковер">
         <OpenMat styles={styles} />
       </Discipline>
       <ImageAnimated
