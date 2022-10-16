@@ -1,24 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { disciplinesByDay } from '../utils/disciplines';
 import Dropdown from './UI/Dropdown';
 import styles from '../styles/form.module.scss';
 import Section from './UI/Section';
 import Subtitle from './UI/Subtitle';
+import { useForm } from 'react-hook-form';
+import Input from './UI/Input';
 
 const RegistrationForm = ({ signRef }) => {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
   const [day, setDay] = useState('');
   const [dayActive, setDayActive] = useState(false);
   const [discipline, setDiscipline] = useState('');
   const [disciplineActive, setDisciplineActive] = useState(false);
+  const [dayError, setDayError] = useState('');
+  const [disciplineError, setDisciplineError] = useState('');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(name);
-    console.log(phone);
-    console.log(day);
-    console.log(discipline);
+  useEffect(() => {
+    if (day) setDayError('');
+    if (discipline) setDisciplineError('');
+  }, [day, discipline]);
+
+  const onSubmit = (data) => {
+    if (!day || !discipline) {
+      if (!day) setDayError('Выберите день недели');
+      if (!discipline) setDisciplineError('Выберите тренировку');
+
+      return;
+    }
+    alert(JSON.stringify(data));
   };
 
   const handleDayClick = () => {
@@ -35,28 +49,22 @@ const RegistrationForm = ({ signRef }) => {
       <Subtitle variant={styles.title}>
         Запишитесь на первую бесплатную тренировку, заполнив форму на сайте
       </Subtitle>
-      <form ref={signRef} className={styles.form}>
+      <form
+        ref={signRef}
+        className={styles.form}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className={styles.field}>
-          <label htmlFor="name">Имя *</label>
-          <input
-            id="name"
-            className={styles.input}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder={'Введите Ваше имя'}
-            type="text"
-          />
+          <Input label="name" register={register} error={errors.name} />
+          {errors.name && (
+            <p className={`text ${styles.error}`}>{errors.name.message}</p>
+          )}
         </div>
         <div className={styles.field}>
-          <label htmlFor="tel">Телефон *</label>
-          <input
-            id="tel"
-            className={styles.input}
-            value={phone}
-            placeholder={'Введите Ваш телефон'}
-            onChange={(e) => setPhone(e.target.value)}
-            type="tel"
-          />
+          <Input label="mail" register={register} error={errors.mail} />
+          {errors.mail && (
+            <p className={`text ${styles.error}`}>{errors.mail.message}</p>
+          )}
         </div>
         <div className={styles.field}>
           <label onClick={() => setDayActive(true)}>День недели *</label>
@@ -67,6 +75,7 @@ const RegistrationForm = ({ signRef }) => {
             state={day}
             setState={setDay}
             initialText={'Выберите день недели'}
+            error={dayError}
             values={[
               'Понедельник',
               'Вторник',
@@ -76,6 +85,7 @@ const RegistrationForm = ({ signRef }) => {
               'Суббота',
             ]}
           />
+          <p className={`text ${styles.error}`}>{dayError}</p>
         </div>
         <div className={styles.field}>
           <label onClick={() => setDisciplineActive(true)}>Тренировка *</label>
@@ -84,10 +94,12 @@ const RegistrationForm = ({ signRef }) => {
             active={disciplineActive}
             setActive={setDisciplineActive}
             state={discipline}
+            error={disciplineError}
             setState={setDiscipline}
             initialText={'Выберите тренировку'}
             values={disciplinesByDay[day] ? disciplinesByDay[day] : []}
           />
+          <p className={`text ${styles.error}`}>{disciplineError}</p>
         </div>
         <button
           onClick={handleSubmit}
