@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Text from './UI/Text';
 import Title from './UI/Title';
 import Subtitle from './UI/Subtitle';
@@ -6,10 +5,6 @@ import ImageAnimated from './UI/ImageAnimated';
 
 export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
   const textArray = text.replace(/\r/g, '').split('\n').filter(Boolean);
-  const [active, setActive] = useState(false);
-  const openText = () => {
-    active ? setActive(false) : setActive(true);
-  };
   const names = {
     1: 'viktor-nikonov',
     2: 'evgeniy-rutko',
@@ -29,12 +24,7 @@ export const TrainerItem = ({ id, image, name, text, disciplines, styles }) => {
       <div className={styles.info}>
         <Title variant={styles.title}>{name}</Title>
         <Subtitle variant={styles.disciplines}>{disciplines}</Subtitle>
-        <div
-          className={`${styles.textBlock} ${
-            active ? styles.textBlockActive : ''
-          }`}
-          onClick={openText}
-        >
+        <div className={styles.textBlock}>
           {textArray.map((elem, i) => (
             <Text variant={styles.text} key={i}>
               {elem}

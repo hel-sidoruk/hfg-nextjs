@@ -1,7 +1,7 @@
 import Text from './UI/Text';
 import ImageAnimated from './UI/ImageAnimated';
 import Subtitle from './UI/Subtitle';
-import Link from 'next/link';
+import SignLink from './UI/SignLink';
 
 const OpenMat = ({ styles }) => {
   return (
@@ -82,13 +82,7 @@ const OpenMat = ({ styles }) => {
           </Text>
         </div>
       </div>
-      <div className={styles.btnBox} style={{ marginBottom: 0 }}>
-        <Link href="/contacts#form">
-          <a className={`btn btn-fill ${styles.btn}`}>
-            Записаться на тренировку
-          </a>
-        </Link>
-      </div>
+      <SignLink />
     </div>
   );
 };
