@@ -8,6 +8,7 @@ const Dropdown = ({
   active,
   setActive,
   onClick,
+  error,
 }) => {
   const handleClick = (e) => {
     setState(e.target.innerText);
@@ -17,7 +18,9 @@ const Dropdown = ({
   return (
     <div
       onClick={onClick}
-      className={`${styles.dropdown} ${!values.length ? styles.disabled : ''}`}
+      className={`${styles.dropdown} ${!values.length ? styles.disabled : ''} ${
+        error ? styles.error : ''
+      }`}
     >
       {state ? '' : <span>{initialText}</span>}
       <div

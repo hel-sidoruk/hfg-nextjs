@@ -35,26 +35,13 @@
     text-transform: uppercase;
   }
 }
-.input {
-  padding: 15px 20px;
-  border-bottom: 2px solid #fff;
-  color: #fff;
-  font-size: 18px;
-  line-height: 24px;
-  width: 100%;
-  font-family: inherit;
-  letter-spacing: 1px;
-  &::placeholder {
-    color: #f4f4f4;
-  }
-  &:focus {
-    outline-color: #A44848;
-  }
-}
 .btn {
   font-size: 20px;
   text-transform: uppercase;
   justify-self: start;
   min-width: 300px;
   letter-spacing: 1px;
+}
+.error {
+  color: #ff7171;
 }
